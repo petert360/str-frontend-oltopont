@@ -22,7 +22,6 @@ Adminisztrátorként szükségem van arra, hogy az adminisztrációs felülethez
 Adminisztrátorként szükségem van arra, hogy az egyes felhasználók felhasználói név, jelszó párossal azonosíthassák magukat, hogy csak a megfelelő jogosultsággal rendelkező felhasználók férjenek hozzá a rendszerhez.
 
 **Elfogadási kritérium**
-
 A feladat elkészült, ha:
 
 - A rendszer belépési (login) képernyővel fogadja a belépni kívánó felhasználót
@@ -61,13 +60,15 @@ Adminisztrátorként szükségem van arra, hogy a feltöltendő adatok CSV form�
 
 **Elfogadási kritérium**
 A feladat elkészült, ha:
-- A külső féltől érkezett XLSX -> CSD
+- A külső féltől érkezett XLSX -> CSV átalakítás megvalósul
 
 **Feladatok**
+- XLSX -> CSV átalakítás megoldása
 
 ### Felhasználói történet #2
 
 **Elfogadási kritérium**
+A feladat elkészült, ha:
 
 **Feladatok**
 
@@ -78,6 +79,7 @@ Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adat
 ### Felhasználói történet #1
 
 **Elfogadási kritérium**
+A feladat elkészült, ha:
 
 **Feladatok**
 
@@ -88,6 +90,7 @@ Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket v�
 ### Felhasználói történet #1
 
 **Elfogadási kritérium**
+A feladat elkészült, ha:
 
 **Feladatok**
 
