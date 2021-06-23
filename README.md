@@ -59,15 +59,19 @@ Adminisztrátorként szükségem van arra, hogy páciens adatokat tudjak feltöl
 Adminisztrátorként szükségem van arra, hogy a feltöltendő adatok CSV formátumban rendelkezésre álljanak, mert az előjegyzési listák a külső féltől Microsoft Excel formátumban érkeznek, és a CSV feldolgozása az adatbázis számára egyszerűbb. Megjegyzés: ez a felhasználói történet nem az applikáció szoros része, a konverzió az applikáción kívül történik meg.
 
 **Elfogadási kritérium**
+
 A feladat elkészült, ha:
+
 - A külső féltől érkezett XLSX -> CSV átalakítás megvalósul
 
 **Feladatok**
+
 - XLSX -> CSV átalakítás megoldása
 
 ### Felhasználói történet #2
 
 **Elfogadási kritérium**
+
 A feladat elkészült, ha:
 
 **Feladatok**
@@ -79,6 +83,7 @@ Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adat
 ### Felhasználói történet #1
 
 **Elfogadási kritérium**
+
 A feladat elkészült, ha:
 
 **Feladatok**
@@ -90,6 +95,7 @@ Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket v�
 ### Felhasználói történet #1
 
 **Elfogadási kritérium**
+
 A feladat elkészült, ha:
 
 **Feladatok**
