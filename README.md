@@ -57,9 +57,11 @@ Adminisztrátorként szükségem van arra, hogy páciens adatokat tudjak feltöl
 
 ### Felhasználói történet #1
 
-Adminisztrátorként szükségem van arra, hogy a feltöltendő adatok CSV formátumban rendelkezésre álljanak, mert az előjegyzési listák a külső féltől Microsoft Excel formátumban léteznek
+Adminisztrátorként szükségem van arra, hogy a feltöltendő adatok CSV formátumban rendelkezésre álljanak, mert az előjegyzési listák a külső féltől Microsoft Excel formátumban érkeznek, és a CSV feldolgozása az adatbázis számára egyszerűbb. Megjegyzés: ez a felhasználói történet nem az applikáció szoros része, a konverzió az applikáción kívül történik meg.
 
 **Elfogadási kritérium**
+A feladat elkészült, ha:
+- A külső féltől érkezett XLSX -> CSD
 
 **Feladatok**
 
