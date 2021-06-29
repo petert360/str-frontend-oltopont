@@ -51,7 +51,7 @@ A feladat elkészült, ha:
 - jelszavak titkosított tárolása
 - felhasználói adatbázis kezelés
 
-## Eposz #2
+## Eposz #2 - Adatok feltöltése
 
 Adminisztrátorként szükségem van arra, hogy páciens adatokat tudjak feltölteni az adatbázisba, hogy a külső féltől érkező adatok az adminisztrációs rendszer részei legyenek
 
@@ -83,7 +83,7 @@ A feladat elkészült, ha:
 - Feltöltés oldal frontend megvalósítása.
 - Feltöltés funkció backend megvalósítása.
 
-## Eposz #3
+## Eposz #3 - Adatok megjeleníítése
 
 Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adatok táblázatos formában megjelenjenek, hogy a napi forgalom átlátható legyen.
 
@@ -96,7 +96,8 @@ Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési 
 A feladat elkészült, ha:
 
 **Feladatok**
-## Eposz #4
+
+## Eposz #4 - Statisztika
 
 Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket végezhessek az adatbázisban tárolt adatokról, annak érdekében, hogy az oltásokkal, páciens forgalommal kapcsolatos kimutatásokat, statisztikákat készíthessek.
 
@@ -112,4 +113,3 @@ A feladat elkészült, ha:
 
 - Páciens adatok beolvasása QR kód segítségével
 - Páciens adatok exportálása külső rendszer számára
-1. 
