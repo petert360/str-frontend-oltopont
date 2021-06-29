@@ -74,17 +74,13 @@ Adminisztrátorként szükségem van arra, hogy a CSV file-t az alkalmazás "Fel
 
 **Elfogadási kritérium**
 
-- Az alkalmazás feltöltés oldalán rendelkezésre áll, és működőképes a feltöltés funkció: a feltöltendő CSV-ben szereplő adatok az adatbáziban megjelennek.
-
 A feladat elkészült, ha:
-
-- Feltöltés oldal elkészült.
-- Feltöltés funkció működőképes.
+- Az alkalmazás feltöltés oldala rendelkezésre áll, és működőképes a feltöltés funkció: a feltöltendő CSV-ben szereplő adatok az adatbáziban megjelennek.
 
 **Feladatok**
 
 - Feltöltés oldal frontend megvalósítása.
-- Feltöltés backend megvalósítása.
+- Feltöltés funkció backend megvalósítása.
 
 ## Eposz #3
 
@@ -92,12 +88,13 @@ Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adat
 
 ### Felhasználói történet #1
 
+Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista táblázatos formában megjelenjen, így az aktuális napi páciens forgalom folyamatosan nyomon követhető.
+
 **Elfogadási kritérium**
 
 A feladat elkészült, ha:
 
 **Feladatok**
-
 ## Eposz #4
 
 Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket végezhessek az adatbázisban tárolt adatokról, annak érdekében, hogy az oltásokkal, páciens forgalommal kapcsolatos kimutatásokat, statisztikákat készíthessek.
