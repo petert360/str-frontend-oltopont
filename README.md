@@ -70,11 +70,21 @@ A feladat elkészült, ha:
 
 ### Felhasználói történet #2
 
+Adminisztrátorként szükségem van arra, hogy a CSV file-t az alkalmazás "Feltöltés oldalán" az adatbázisba feltölthessem, hogy az előjegyzési, illetve páciens adatok az adatbázisban elérhetővé váljanak.
+
 **Elfogadási kritérium**
+
+- Az alkalmazás feltöltés oldalán rendelkezésre áll, és működőképes a feltöltés funkció: a feltöltendő CSV-ben szereplő adatok az adatbáziban megjelennek.
 
 A feladat elkészült, ha:
 
+- Feltöltés oldal elkészült.
+- Feltöltés funkció működőképes.
+
 **Feladatok**
+
+- Feltöltés oldal frontend megvalósítása.
+- Feltöltés backend megvalósítása.
 
 ## Eposz #3
 
