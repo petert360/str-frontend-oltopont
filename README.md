@@ -13,7 +13,7 @@ A felhasználói történetek az alábbi struktúra szerint rendeződnek:
 
 A kórházi oltópont adminisztrátorként (továbbiakban adminisztrátor) egy olyan reszponzív felülettel rendelkező adminisztrációs rendszerre van szükségem, mely teljeskörűen kezeli az előjegyzett és az oltópontra érkezett páciensek adatait, annak érdekében, hogy az oltóponton nagyszámú páciens ellátása tervezetten, gyorsan, biztonságosan történjen.
 
-## Eposz #1 - 
+## Eposz #1 - Autentikáció
 
 Adminisztrátorként szükségem van arra, hogy az adminisztrációs felülethez csak autentikációt követően lehessen hozzáférni az adatok biztonsága érdekében.
 
@@ -112,3 +112,4 @@ A feladat elkészült, ha:
 
 - Páciens adatok beolvasása QR kód segítségével
 - Páciens adatok exportálása külső rendszer számára
+1. 
