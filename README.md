@@ -1,4 +1,4 @@
-# Igény - oltópont adminisztrációs rendszer (User Story)
+# Oltópont adminisztrációs rendszer - User Story
 
 A kórházi oltópont adminisztrátorként (továbbiakban adminisztrátor) egy olyan reszponzív felülettel rendelkező adminisztrációs rendszerre van szükségem, mely teljeskörűen kezeli az előjegyzett és az oltópontra érkezett páciensek adatait, annak érdekében, hogy az oltóponton nagyszámú páciens ellátása tervezetten, gyorsan, biztonságosan történjen.
 
