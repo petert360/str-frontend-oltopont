@@ -36,9 +36,9 @@ A feladat elkészült, ha:
 
 #### Feladatok
 
-- adatbázis létrehozása
-- jelszavak titkosított tárolása
-- felhasználói adatbázis kezelés
+- adatbázis létrehozása,
+- jelszavak titkosított tárolása,
+- felhasználói adatbázis kezelés.
 
 ## Eposz #2 - Adatok feltöltése
 
@@ -56,7 +56,7 @@ A feladat elkészült, ha:
 
 #### Feladatok
 
-- XLSX -> CSV átalakítás megoldása
+- XLSX -> CSV átalakítás megoldása.
 
 ### Felhasználói történet #2
 
@@ -114,11 +114,19 @@ Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket v�
 
 ### Felhasználói történet #1
 
+[...]
+
 #### Elfogadási kritérium
+
+[...]
 
 A feladat elkészült, ha:
 
+[...]
+
 #### Feladatok
+
+[...]
 
 ## Fejlesztési lehetőségek
 
@@ -135,4 +143,4 @@ A felhasználói történetek az alábbi struktúra szerint rendeződnek:
 - a legfelsőbb szinten az igényt fogalmaztam meg (H1),
 - ez alatt eposzok foglalják csoportba a felhasználói történeteket (H2),
 - a felhasználói történeteket (H3) eposzok szerint csoportosítottam, és magukba foglalják az elfogadási kritériumot (H4) és a kritérium teljesítéséhez szükséges feladatokat (H4),
-- a további fejlesztési lehetőségeket külön kiemeltem (H3)
+- a további fejlesztési lehetőségeket külön kiemeltem (H3).
