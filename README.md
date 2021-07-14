@@ -1,17 +1,16 @@
-User Story
-## Igény - oltópont adminisztrációs rendszer
+# Igény - oltópont adminisztrációs rendszer (User Story)
 
 A kórházi oltópont adminisztrátorként (továbbiakban adminisztrátor) egy olyan reszponzív felülettel rendelkező adminisztrációs rendszerre van szükségem, mely teljeskörűen kezeli az előjegyzett és az oltópontra érkezett páciensek adatait, annak érdekében, hogy az oltóponton nagyszámú páciens ellátása tervezetten, gyorsan, biztonságosan történjen.
 
-### Eposz #1 - Autentikáció
+## Eposz #1 - Autentikáció
 
 Adminisztrátorként szükségem van arra, hogy az adminisztrációs felülethez csak autentikációt követően lehessen hozzáférni az adatok biztonsága érdekében.
 
-#### Felhasználói történet #1
+### Felhasználói történet #1
 
 Adminisztrátorként szükségem van arra, hogy az egyes felhasználók felhasználói név, jelszó párossal azonosíthassák magukat, hogy csak a megfelelő jogosultsággal rendelkező felhasználók férjenek hozzá a rendszerhez.
 
-##### Elfogadási kritérium
+#### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
@@ -19,7 +18,7 @@ A feladat elkészült, ha:
 - A jelszó nem látható módon gépelhető be.
 - Csak a rendszergazda által regisztrált felhasználó névvel és a hozzátartozó jelszóval rendelkező felhasználók léphetnek be a rendszerbe.
 
-##### Feladatok
+#### Feladatok
 
 - reszponzív belépési űrlap létrehozása,
 - űrlap validáció megvalósítása.
