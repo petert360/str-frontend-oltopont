@@ -143,4 +143,4 @@ A felhasználói történetek az alábbi struktúra szerint rendeződnek:
 - a legfelsőbb szinten az igényt fogalmaztam meg (H1),
 - ez alatt eposzok foglalják csoportba a felhasználói történeteket (H2),
 - a felhasználói történeteket (H3) eposzok szerint csoportosítottam, és magukba foglalják az elfogadási kritériumot (H4) és a kritérium teljesítéséhez szükséges feladatokat (H4),
-- a további fejlesztési lehetőségeket külön kiemeltem (H3).
+- a további fejlesztési lehetőségeket külön kiemeltem (H2).
