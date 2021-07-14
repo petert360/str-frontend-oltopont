@@ -73,13 +73,13 @@ A feladat elkészült, ha:
 - Feltöltés oldal frontend megvalósítása.
 - Feltöltés funkció backend megvalósítása.
 
-## Eposz #3 - Adatok megjelenítése
+## Eposz #3 - Napi adatok megjelenítése
 
 Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adatok táblázatos formában megjelenjenek, hogy a napi forgalom átlátható legyen.
 
 ### Felhasználói történet #1
 
-Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista táblázatos formában megjelenjen, így az aktuális napi páciens forgalom folyamatosan nyomon követhető.
+Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista táblázatában az egyes sorok elemein  táblázatos formában megjelenjen, így az aktuális napi páciens forgalom folyamatosan nyomon követhető.
 
 #### Elfogadási kritérium
 
@@ -93,17 +93,20 @@ A feladat elkészült, ha:
 
 ### Felhasználói történet #2
 
-Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista táblázatában az egyes sorok elemein  táblázatos formában megjelenjen, így az aktuális napi páciens forgalom folyamatosan nyomon követhető.
+Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista elemeihez törlés és részletek megtekintése funkciók tartozzanak, annak érdekében, hogy a páciens adatainak részletei megtekinthetőek vagy az adatok törlése magvalósítható legyen.
 
 #### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
-- Az aktuális napi lista egy reszponzív oldalon táblázatos formában megjelenik.
+- A napi lista elemeihez részletek megtekintése funkció tartozik.
+- A napi lista elemeihez törlés funkció tartozik.
 
 #### Feladatok
 
-- Reszponzív napi lista oldal elkészítése.
+- A napi lista elemeihez páciens részletek megjelenítése, törlés funkció hozzárendelése.
+- A páciens részletek oldal elkészítése.
+- Törleés funkció megvalósítása az adatbázis kezelésben.
 
 ## Eposz #4 - Statisztika
 
