@@ -127,7 +127,7 @@ A feladat elkészült, ha:
 ## A dokumentum felépítése
 
 A felhasználói történetek az alábbi struktúra szerint rendeződnek:  
-(forrás: <https://salmapatel.co.uk/academia/user-needs-vs-user-stories-in-agile/>)
+(forrás: *[User needs vs User stories in Agile development](https://salmapatel.co.uk/academia/user-needs-vs-user-stories-in-agile)*)
 
 - a legfelsőbb szinten az igényt fogalmaztam meg (H1),
 - ez alatt eposzok foglalják csoportba a felhasználói történeteket (H2),
