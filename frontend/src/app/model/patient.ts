@@ -10,5 +10,5 @@ export class Patient {
     email: string = '';
     vaccine: Vaccine = new Vaccine;
     // riskGroup: string = '';
-    vaccination: Vaccination = new Vaccination;
+    vaccinations: Vaccination[] = []; 
 }
