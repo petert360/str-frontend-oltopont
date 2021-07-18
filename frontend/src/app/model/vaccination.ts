@@ -1,3 +1,4 @@
+import { AdverseEvent } from "./adverse-event";
 import { Vaccine } from "./vaccine";
 
 export class Vaccination {
@@ -6,7 +7,7 @@ export class Vaccination {
     dose: number = 0; // Number of dose administered
     injectionSite: string = '';
     injectionType: string = '';
-    adverseEvent: boolean = false; // Adverse event after vaccination true/false
-    aeDescription: string = ''; // Adverse event description
-    // comment:  string = '';
+    adverseEvent: AdverseEvent = new AdverseEvent;
+    eeszt: boolean = false; // EESZT documentation
+    // comment:  string = ''
 }
