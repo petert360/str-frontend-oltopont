@@ -1,4 +1,5 @@
 import { AdverseEvent } from "./adverse-event";
+import { Place } from "./place";
 import { Vaccine } from "./vaccine";
 
 export class Vaccination {
@@ -9,5 +10,6 @@ export class Vaccination {
     injectionType: string = '';
     adverseEvent: AdverseEvent = new AdverseEvent;
     eeszt: boolean = false; // EESZT documentation
+    place: Place = new Place;
     // comment:  string = ''
 }
