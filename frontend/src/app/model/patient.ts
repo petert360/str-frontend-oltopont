@@ -11,4 +11,5 @@ export class Patient {
     vaccine: Vaccine = new Vaccine;
     // riskGroup: string = '';
     vaccinations: Vaccination[] = []; 
+    active: boolean = true;
 }
