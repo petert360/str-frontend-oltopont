@@ -16,7 +16,6 @@ export class UserService {
     private http: HttpClient,
   ) { }
 
-
   get(id?: string | number): Observable<User | User[]> {
     let url = `${this.config.apiUrl}${this.entity}`;
     if (id) {
@@ -26,12 +25,10 @@ export class UserService {
     return this.http.get<User[]>(url);
   }
 
-
   query(queryString: string): Observable<User | User[]> {
     const url = `${this.config.apiUrl}${this.entity}?${queryString}`;
     return this.http.get<User[]>(url);
   }
-
 
   update(user: User): Observable<User> {
     const url = `${this.config.apiUrl}${this.entity}/${user.id}`;

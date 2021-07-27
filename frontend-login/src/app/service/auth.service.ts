@@ -26,7 +26,7 @@ export class AuthService {
     private userService: UserService,
   ) { }
 
-  get currentUserValue(): User{
+  get currentUserValue(): User {
     return this.currentUserSubject.value;
   }
 
