@@ -3,6 +3,7 @@ import { Place } from "./place";
 import { Vaccine } from "./vaccine";
 
 export class Vaccination {
+    _id: string = '';
     vaccine: Vaccine = new Vaccine;
     date: Date = new Date();
     dose: number = 0; // Number of dose administered
