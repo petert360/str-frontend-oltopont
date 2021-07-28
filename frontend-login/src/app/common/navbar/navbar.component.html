@@ -16,12 +16,13 @@
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-expanded="false">
-                Felhasználó
+                <span *ngIf="!user">Menü</span>
+                <span *ngIf="user">Hi {{ user?.first_name }}!</span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Beállítások</a></li>
-                <li><a class="dropdown-item" href="#">Üzenetek</a></li>
-                <li><a class="dropdown-item" href="#">Kilépés</a></li>
+                <li *ngIf="!user"><a class="dropdown-item" routerLink="/login">Belépés</a></li>
+                <li><a class="dropdown-item" href="#">Menüpont</a></li>
+                <li *ngIf="user" (click)="onLogout()"><a class="dropdown-item" href="#">Kilépés</a></li>
             </ul>
         </div>
     </div>
