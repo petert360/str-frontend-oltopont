@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col-12 text-center">
         <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)" class="form-signin mt-5">
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <p *ngIf="emailField.invalid && emailField.touched" class="error-message"> Please type a valid email. </p>
+            <h1 class="h3 mb-3 font-weight-normal">Oltópont belépés</h1>
+            <p *ngIf="emailField.invalid && emailField.touched" class="error-message">Kérem, adjon meg egy valós e-mail címet.</p>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" name="email" [(ngModel)]="user.email" #emailField="ngModel" email id="inputEmail"
-                class="form-control" placeholder="Email address" required autofocus>
+                class="form-control" placeholder="Email cím" required autofocus>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" name="password" [(ngModel)]="user.password" #passwordField
-                class="form-control" placeholder="Password" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Sign
-                in</button>
+                class="form-control" placeholder="Jelszó" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit"
+                [disabled]="loginForm.invalid">Belépés</button>
 
             <div *ngIf="serverError && loginForm.submitted" class="alert alert-danger mt-3">
                 {{ serverError }}
