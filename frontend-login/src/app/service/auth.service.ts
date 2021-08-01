@@ -16,7 +16,7 @@ export class AuthService {
   loginUrl = `${this.config.apiUrl}login`;
   logoutUrl = `${this.config.apiUrl}logout`;
   storageName = 'currentUser';
-  currentUserSubject: BehaviorSubject<User | null> = new BehaviorSubject(null);
+  currentUserSubject$: BehaviorSubject<User | null> = new BehaviorSubject(null);
   lastToken: string = '';
 
   constructor(
@@ -27,12 +27,12 @@ export class AuthService {
   ) { }
 
   get currentUserValue(): User {
-    return this.currentUserSubject.value;
+    return this.currentUserSubject$.value;
   }
 
   logout() {
     localStorage.removeItem(this.storageName);
-    this.currentUserSubject.next(null);
+    this.currentUserSubject$.next(null);
     this.router.navigate(['login']);
   }
 
@@ -57,12 +57,12 @@ export class AuthService {
         tap(user => {
           if (!user) {
             localStorage.removeItem(this.storageName);
-            this.currentUserSubject.next(null);
+            this.currentUserSubject$.next(null);
             // ha van user, akkor annak adatait frissítem és a localStorage-ban tároljuk
           } else {
             user[0].token = this.lastToken;
             localStorage.setItem(this.storageName, JSON.stringify(user[0]));
-            this.currentUserSubject.next(user[0]);
+            this.currentUserSubject$.next(user[0]);
           }
         })
       );
