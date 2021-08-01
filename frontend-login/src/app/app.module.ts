@@ -12,6 +12,7 @@ import { LoginComponent } from './page/login/login.component';
 import { HomeComponent } from './page/home/home.component';
 import { AdminComponent } from './page/admin/admin.component';
 import { JwtInterceptorService } from './service/jwt-interceptor.service';
+import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JwtInterceptorService } from './service/jwt-interceptor.service';
     FooterComponent,
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
