@@ -2,25 +2,25 @@
   "users": [
     {
       "id": 1,
-      "first_name": "Charlie",
-      "last_name": "Firpo",
+      "first_name": "Admin",
+      "last_name": "Teszt",
       "email": "a@a.com",
       "password": "$2a$10$KKzAQMXlYJSq7VMlCKcJb.cIVpW4J22j482HLbglgpvTarJZUQc1C",
       "role": "3"
     },
     {
       "id": 2,
-      "first_name": "Finn",
-      "last_name": "Upjohn",
-      "email": "fupjohn1@paypal.com",
+      "first_name": "Orvos",
+      "last_name": "Teszt",
+      "email": "o@o.com",
       "password": "$2a$10$xW1vJhe3xczrnTQOZYlaY.DV/UbYal1.lc2d9ip6tw3.6cWv8XoQ.",
-      "role": "1"
+      "role": "2"
     },
     {
       "id": 3,
-      "first_name": "Nickey",
-      "last_name": "Tyt",
-      "email": "ntyt2@psu.edu",
+      "first_name": "Személyzet",
+      "last_name": "Teszt",
+      "email": "sz@sz.com",
       "password": "$2a$10$eZMp/S6cJtgOTy94BKQaAun/m.f3eIu8smIpIi2tvQUgGAiwxfDsy",
       "role": 3
     },
