@@ -12,9 +12,9 @@ import { AuthService } from 'src/app/service/auth.service';
 export class NavbarComponent implements OnInit {
 
   loginStatus = false;
-  userSub: Subscription;
+  userSub: Subscription= new Subscription();
   user: User | null = null;
-  router: Router
+  //router: Router;
 
 
   constructor(

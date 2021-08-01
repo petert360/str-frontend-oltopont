@@ -16,7 +16,7 @@ export class AuthService {
   loginUrl = `${this.config.apiUrl}login`;
   logoutUrl = `${this.config.apiUrl}logout`;
   storageName = 'currentUser';
-  currentUserSubject$: BehaviorSubject<User | null> = new BehaviorSubject(null);
+  currentUserSubject$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
   lastToken: string = '';
 
   constructor(
@@ -24,20 +24,27 @@ export class AuthService {
     private http: HttpClient,
     private router: Router,
     private userService: UserService,
-  ) { }
+  ) {
+    if (localStorage.currentUser) {
+      const user: User = JSON.parse(localStorage.currentUser);
+      this.lastToken = user.token || '';
+      this.currentUserSubject$.next(user)
+    }
+  }
 
-  get currentUserValue(): User {
+  get currentUserValue(): User | null {
     return this.currentUserSubject$.value;
   }
 
   logout() {
+    this.lastToken = '';
     localStorage.removeItem(this.storageName);
     this.currentUserSubject$.next(null);
     this.router.navigate(['login']);
   }
 
   // küldünk egy egyszrű HHTP kéréset az autentikációt végző szervernek
-  login(loginData: User): Observable<{ accessToken: string }> {
+  login(loginData: User): Observable<User | User[] | null> {
     return this.http.post<{ accessToken: string }>(
       this.loginUrl,
       { email: loginData.email, password: loginData.password }
@@ -60,9 +67,9 @@ export class AuthService {
             this.currentUserSubject$.next(null);
             // ha van user, akkor annak adatait frissítem és a localStorage-ban tároljuk
           } else {
-            user[0].token = this.lastToken;
-            localStorage.setItem(this.storageName, JSON.stringify(user[0]));
-            this.currentUserSubject$.next(user[0]);
+            (user as User[])[0].token = this.lastToken;
+            localStorage.setItem(this.storageName, JSON.stringify((user as User[])[0]));
+            this.currentUserSubject$.next((user as User[])[0]);
           }
         })
       );
