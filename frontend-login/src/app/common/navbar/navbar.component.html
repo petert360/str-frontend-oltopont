@@ -1,17 +1,21 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-light bg-light p-3">
     <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+        
         <a class="navbar-brand" routerLink="/">
             Oltópont
         </a>
+        
         <div *ngIf="user">
             <input class="form-control form-control-dark" type="text" placeholder="Keresés..." aria-label="Search">
         </div>
-        <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebar"
+        
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#sidebar"
             aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
+
     <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
         <button *ngIf="!user" class="btn btn-primary" type="button" id="dropdownMenuButton" routerLink="/login">
             <span>Belépés</span>
