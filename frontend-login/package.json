@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "json-auth": "json-server-auth ./server/users.json -r ./routes.json",
+    "json-auth": "json-server-auth ./server/db.json -r ./routes.json",
     "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
