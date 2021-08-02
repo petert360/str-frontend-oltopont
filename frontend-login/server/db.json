@@ -103,7 +103,7 @@
   ],
   "users": [
     {
-      "id": 1,
+      "_id": 1,
       "first_name": "Admin",
       "last_name": "Teszt",
       "email": "a@a.com",
@@ -111,7 +111,7 @@
       "role": "3"
     },
     {
-      "id": 2,
+      "_id": 2,
       "first_name": "Orvos",
       "last_name": "Teszt",
       "email": "o@o.com",
@@ -119,7 +119,7 @@
       "role": "2"
     },
     {
-      "id": 3,
+      "_id": 3,
       "first_name": "Személyzet",
       "last_name": "Teszt",
       "email": "sz@sz.com",
@@ -127,7 +127,7 @@
       "role": 3
     },
     {
-      "id": 4,
+      "_id": 4,
       "first_name": "Goldia",
       "last_name": "Bloodworthe",
       "email": "gbloodworthe3@mail.ru",
@@ -135,7 +135,7 @@
       "role": 1
     },
     {
-      "id": 5,
+      "_id": 5,
       "first_name": "Berti",
       "last_name": "Farthing",
       "email": "bfarthing4@nymag.com",
