@@ -1,25 +1,21 @@
 const mongoose = require(mongoose);
 
-const VaccineSchema = mongoose.Schema(
+const PlaceSchema = mongoose.Schema(
     {
         /* _id-ra nincs szükség, mert a mongoDB automatikusan kezeli
     _id: {
         type: mongoose.Schema.Types.ObjectId,
     }, */
-        manufacture: {
+        hospital: {
             type: String,
             required: true,
         },
-        product: {
+        address: {
             type: String,
             required: true,
         },
-        lot: {
+        building: {
             type: String,
-            required: true,
-        },
-        doseInterval: {
-            type: Number,
             required: true,
         },
     },
@@ -28,14 +24,13 @@ const VaccineSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('Vaccine', VaccineSchema);
+module.exports = mongoose.module('Place', PlaceSchema);
 
 /*
-export class Vaccine {
+export class Place {
     _id: string = '';
-    manufacture: string = '';
-    product: string = '';
-    lot: string = '';
-    doseInterval: number = 0; // Days between first and second doses
+    hospital: string = '';
+    address: string = '';
+    building: string = '';
 }
 */
