@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const VaccinationSchema = mongoose.Schema(
     {
@@ -44,7 +44,7 @@ const VaccinationSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('Vaccination', VaccinationSchema);
+module.exports = mongoose.model('Vaccination', VaccinationSchema);
 
 /*
 import { AdverseEvent } from "./adverse-event";

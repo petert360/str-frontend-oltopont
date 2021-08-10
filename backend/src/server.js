@@ -67,6 +67,7 @@ app.use('/patient', require('./controllers/patient/routes'));
 app.use('/vaccine', require('./controllers/vaccine/routes'));
 app.use('/adverse-event', require('./controllers/adverse-event/routes'));
 app.use('/place', require('./controllers/place/routes'));
+app.use('/vaccination', require('./controllers/vaccination/routes'));
 
 app.use((err, req, res, next) => {
     //console.error(`ERR ${err.statusCode}: ${err.message}`);
