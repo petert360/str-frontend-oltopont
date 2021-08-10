@@ -65,6 +65,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // saját route-ok
 app.use('/patient', require('./controllers/patient/routes'));
 app.use('/vaccine', require('./controllers/vaccine/routes'));
+app.use('/adverse-event', require('./controllers/adverse-event/routes'));
 
 app.use((err, req, res, next) => {
     //console.error(`ERR ${err.statusCode}: ${err.message}`);

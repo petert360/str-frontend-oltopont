@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const AdverseEventSchema = mongoose.Schema(
     {
@@ -25,7 +25,7 @@ const AdverseEventSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('AdverseEvent', AdverseEventSchema);
+module.exports = mongoose.model('AdverseEvent', AdverseEventSchema);
 
 /*
 import { Patient } from "./patient";
