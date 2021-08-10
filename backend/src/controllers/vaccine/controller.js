@@ -4,7 +4,7 @@ const createError = require('http-errors');
 const Model = require('../../models/vaccine.model');
 const service = require('./service');
 
-// Create a new person.
+// Create a new vaccine.
 exports.create = (req, res, next) => {
     const validationErrors = new Model(req.body).validateSync();
     if (validationErrors) {

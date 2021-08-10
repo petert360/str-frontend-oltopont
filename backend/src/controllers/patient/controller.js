@@ -32,7 +32,7 @@ exports.findOne = (req, res, next) => {
     return service.findOne(req.params.id)
         .then( entity => {
             if (!entity) {
-                return next(new createError.NotFound("Petient was not found"));
+                return next(new createError.NotFound("Patient was not found"));
             }
             return res.json(entity);
         });

@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const VaccineSchema = mongoose.Schema(
     {
@@ -28,7 +28,7 @@ const VaccineSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('Vaccine', VaccineSchema);
+module.exports = mongoose.model('Vaccine', VaccineSchema);
 
 /*
 export class Vaccine {

@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const PatientSchema = mongoose.Schema(
     {
@@ -19,17 +19,17 @@ const PatientSchema = mongoose.Schema(
             required: true,
         },
         phone: {
-            type: string,
+            type: String,
             required: true,
         },
         email: {
-            type: string,
+            type: String,
             required: true,
         },
         vaccine: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Vaccine',
-            required: true,
+            //required: true,
         },
         vaccinations: {
             type: [mongoose.Schema.Types.ObjectId],
@@ -45,7 +45,7 @@ const PatientSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('Patient', PatientSchema);
+module.exports = mongoose.model('Patient', PatientSchema);
 
 /*
 import { Vaccine } from "./vaccine";
