@@ -1,4 +1,4 @@
-const mongoose = require(mongoose);
+const mongoose = require('mongoose');
 
 const PlaceSchema = mongoose.Schema(
     {
@@ -24,7 +24,7 @@ const PlaceSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.module('Place', PlaceSchema);
+module.exports = mongoose.model('Place', PlaceSchema);
 
 /*
 export class Place {

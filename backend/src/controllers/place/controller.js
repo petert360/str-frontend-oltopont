@@ -4,7 +4,7 @@ const createError = require('http-errors');
 const Model = require('../../models/place.model');
 const service = require('./service');
 
-// Create a new person.
+// Create a new place.
 exports.create = (req, res, next) => {
     const validationErrors = new Model(req.body).validateSync();
     if (validationErrors) {
