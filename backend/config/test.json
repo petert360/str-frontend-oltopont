@@ -1,0 +1,7 @@
+{
+    "database": {
+        "username": "dbUser",
+        "password": "dbUserPassword",
+        "host": "cluster0.6apci.mongodb.net/JestDB?retryWrites=true&w=majority"
+    }
+}
