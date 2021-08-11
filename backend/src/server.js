@@ -1,6 +1,7 @@
 const express = require('express');
 const config = require('config'); // config beolvasása
 const logger = require('./config/logger');
+const cors = require('./config/cors');
 const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -39,6 +40,19 @@ mongoose
         logger.error(err);
         process.exit();
     });
+
+
+
+// CORS hiba miatt:
+/*
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    res.header("Access-Control-Allow-Methods", "*");
+    next();
+  });
+*/  
+app.use(cors());
 
 // request logging - fontos, hogy a routers betöltése előtt legyen
 app.use(morgan('combined', { stream: logger.stream }));

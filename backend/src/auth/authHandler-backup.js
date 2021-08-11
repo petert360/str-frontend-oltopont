@@ -3,12 +3,12 @@ const jwt = require('jsonwebtoken');
 // Felhasználók adatbázisa:
 const Users = [
     {
-        email: 'admin',
+        username: 'admin',
         password: 'admin_pw',
         role: 'admin',
     },
     {
-        email: 'user',
+        username: 'user',
         password: 'user_pw',
         role: 'user',
     },
@@ -40,7 +40,7 @@ module.exports.refresh = (req, res, next) => {
         }
         // Ha nincs hiba, új tokent állítunk ki:
         const accessToken = jwt.sign({
-            email: user.email,
+            username: user.username,
             role: user.role
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY
@@ -54,25 +54,25 @@ module.exports.refresh = (req, res, next) => {
 
 //login.js-ből érkezett
 module.exports.login = (req, res) => {
-    // Read email and password from request body
-    const { email, password } = req.body;
+    // Read username and password from request body
+    const { username, password } = req.body;
 
-    // Filter user from the users array by email and password
+    // Filter user from the users array by username and password
     const user = Users.find(u => {
-        return u.email === email && u.password === password;
+        return u.username === username && u.password === password;
     });
 
     if (user) {
         // Generate an access token
         const accessToken = jwt.sign({
-            email: user.email,
+            username: user.username,
             role: user.role
         },  process.env.ACCESS_TOKEN_SECRET, {
              expiresIn: process.env.TOKEN_EXPIRY
         });
 
         const refreshToken = jwt.sign({
-            email: user.email, 
+            username: user.username, 
             role: user.role
         }, process.env.REFRESH_TOKEN_SECRET);
         // Elmentjük a tömbbe
@@ -80,11 +80,10 @@ module.exports.login = (req, res) => {
         
         res.json({
             accessToken,
-            refreshToken,
-            user,
+            refreshToken
         });
     } else {
-        res.send('email or password incorrect');
+        res.send('Username or password incorrect');
     }
 };
 

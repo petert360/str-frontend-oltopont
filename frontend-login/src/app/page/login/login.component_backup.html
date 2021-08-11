@@ -1,0 +1,26 @@
+<div class="card pb-3 mt-5 text-center">
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)" class="form-signin">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login" width="72" height="72"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+            <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+        </svg>
+        <h1 class="h3 mb-3 font-weight-normal">Oltópont belépés</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" [(ngModel)]="user.email" #emailField="ngModel" email id="inputEmail"
+            class="form-control" placeholder="Email cím" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" [(ngModel)]="user.password" #passwordField
+            class="form-control" placeholder="Jelszó" required>
+        <div class="warning">
+            <p *ngIf="emailField.invalid && emailField.touched && !emailField.pristine" class="error-message">
+                Kérem, adjon meg egy valós e-mail címet.</p>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Belépés</button>
+        <div *ngIf="serverError && loginForm.submitted" class="alert alert-danger mt-3">
+            {{ serverError }}
+        </div>
+    </form>
+</div>
