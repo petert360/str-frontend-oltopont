@@ -1,0 +1,30 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "user_pw"
+}
+
+###
+http://localhost:3000/refresh
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODU0MzY0NH0.Sm54HD9JUpkPGcoUiwOBFyPHR8D8YdoB30Q6EDAzamc"
+}
+
+###
+
+http://localhost:3000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODU0NDY5Nn0.wXnMIplp2MINYw5qyQFWqbkTRBaZEQ91xaGzmPi2_vQ"
+}
+
+###
+
+GET http://localhost:3000/person
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODcwMTQzNiwiZXhwIjoxNjI4NzAyNjM2fQ.L1AJ1FlLS0ruUAVcLAXdJBnseltLKopO3GYJppnxoV8

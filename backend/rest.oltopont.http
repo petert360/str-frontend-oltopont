@@ -1,0 +1,116 @@
+# GET requests
+GET http://localhost:3000/patient
+
+###
+
+GET http://localhost:3000/adverse-event
+
+###
+
+GET http://localhost:3000/vaccine
+
+###
+
+GET http://localhost:3000/vaccination
+
+###
+
+GET http://localhost:3000/place
+
+###
+
+POST http://localhost:3000/patient
+Content-Type: application/json
+
+{
+  "name": "Feliza Philippa",
+  "personalId": "2604976561",
+  "dob": "9/13/2000",
+  "phone": "306-444-6065",
+  "email": "fphilippault0@theguardians.com",
+	"vaccine": "6112f228de213f25e65a78e0",
+  "active": true
+}
+
+###
+
+POST http://localhost:3000/adverse-event
+content-type: application/json
+
+{
+  "patient": "6112f367de213f25e65a78e9",
+  "date": "2021-01-14",
+  "description": "tempor convallis nulla sadad neque libero"
+}
+
+###
+
+POST http://localhost:3000/vaccine
+content-type: application/json
+
+{
+  "manufacture": "Cosmecca Korea",
+  "product": "Always Perfects",
+  "lot": "ut34234",
+  "doseInterval": 21
+}
+
+###
+
+POST http://localhost:3000/vaccination
+content-type: application/json
+
+{
+  "vaccine": "6112f228de213f25e65a78e0",
+  "date": "3/21/2020",
+  "dose": 3,
+  "injectionSite": "egetdsf",
+  "injectionType": "insdf",
+  "adverseEvent": "6112f69fea9b273c164acf3d",
+  "eeszt": "true",
+  "place": "6112f8feed815d3a6aa7c867"
+}
+
+###
+
+POST http://localhost:3000/place
+content-type: application/json
+
+{
+  "hospital": "Dynab",
+  "address": "40 Redwing Avenue",
+  "building": 3
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "user_pw"
+}
+
+###
+http://localhost:3000/refresh
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODU0MzY0NH0.Sm54HD9JUpkPGcoUiwOBFyPHR8D8YdoB30Q6EDAzamc"
+}
+
+###
+
+http://localhost:3000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODU0NDY5Nn0.wXnMIplp2MINYw5qyQFWqbkTRBaZEQ91xaGzmPi2_vQ"
+}
+
+###
+
+GET http://localhost:3000/person
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyODcwMTQzNiwiZXhwIjoxNjI4NzAyNjM2fQ.L1AJ1FlLS0ruUAVcLAXdJBnseltLKopO3GYJppnxoV8
