@@ -12,6 +12,12 @@ const Users = [
         password: 'user_pw',
         role: 'user',
     },
+    {
+        email: 'a@a.com',
+        password: 'test',
+        role: 'user',
+    },
+
 ];
 
 // a frissítő tokeneket tömbben tároljuk el
