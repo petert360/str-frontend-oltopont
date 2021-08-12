@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { switchMap, tap } from 'rxjs/operators';
+import { switchMap, map, tap } from 'rxjs/operators';
 
 import { User } from '../model/user';
 import { ConfigService } from './config.service';
@@ -27,7 +27,7 @@ export class AuthService {
   ) {
     if (localStorage.currentUser) {
       const user: User = JSON.parse(localStorage.currentUser);
-      this.lastToken = user.token || '';
+      this.lastToken = user.accessToken || '';
       this.currentUserSubject$.next(user)
     }
   }
@@ -43,36 +43,57 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-  // küldünk egy egyszrű HHTP kéréset az autentikációt végző szervernek
-  login(loginData: User): Observable<User | User[] | null> {
-    return this.http.post<{ accessToken: string }>(
+  // Login a konzultációk alapján
+  login(loginData: User): Observable<User | null> {
+    return this.http.post<{ user: User, accessToken: string }>(
       this.loginUrl,
-      { email: loginData.email, password: loginData.password }
-    )
-      // az eredményt tovább pipe-oljuk
-      .pipe(switchMap(response => {
-        // ha van accessToken, akkor továbbdobjuk a kérést,
-        // és lekérjük az adatokat a userService-segítségével
-        if (response.accessToken) {
+      loginData
+    ).pipe(
+      map(response => {
+        if (response.user && response.accessToken) {
           this.lastToken = response.accessToken;
-          return this.userService.query(`email=${loginData.email}`);
+          response.user.accessToken = response.accessToken;
+          this.currentUserSubject$.next(response.user);
+          localStorage.currentUser = JSON.stringify(response.user);
+          return response.user;
         }
-        return of(null);
-      }))
-      // tovább vizsgáljuk a választ, ha nincs user, akkor töröljük a bejelentkzést
-      .pipe(
-        tap(user => {
-          if (!user) {
-            localStorage.removeItem(this.storageName);
-            this.currentUserSubject$.next(null);
-            // ha van user, akkor annak adatait frissítem és a localStorage-ban tároljuk
-          } else {
-            (user as User[])[0].token = this.lastToken;
-            localStorage.setItem(this.storageName, JSON.stringify((user as User[])[0]));
-            this.currentUserSubject$.next((user as User[])[0]);
-          }
-        })
-      );
+        return null;
+      })
+    );
   }
 
+  /* 
+   Login() a tananyag alapján
+   // küldünk egy egyszrű HHTP kéréset az autentikációt végző szervernek
+   login(loginData: User): Observable<User | User[] | null> {
+     return this.http.post<{ accessToken: string }>(
+       this.loginUrl,
+       { email: loginData.email, password: loginData.password }
+     )
+       // az eredményt tovább pipe-oljuk
+       .pipe(switchMap(response => {
+         // ha van accessToken, akkor továbbdobjuk a kérést,
+         // és lekérjük az adatokat a userService-segítségével
+         if (response.accessToken) {
+           this.lastToken = response.accessToken;
+           return this.userService.query(`email=${loginData.email}`);
+         }
+         return of(null);
+       }))
+       // tovább vizsgáljuk a választ, ha nincs user, akkor töröljük a bejelentkzést
+       .pipe(
+         tap(user => {
+           if (!user) {
+             localStorage.removeItem(this.storageName);
+             this.currentUserSubject$.next(null);
+             // ha van user, akkor annak adatait frissítem és a localStorage-ban tároljuk
+           } else {
+             (user as User[])[0].token = this.lastToken;
+             localStorage.setItem(this.storageName, JSON.stringify((user as User[])[0]));
+             this.currentUserSubject$.next((user as User[])[0]);
+           }
+         })
+       );
+   }
+ */
 }

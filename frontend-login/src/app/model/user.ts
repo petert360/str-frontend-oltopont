@@ -5,5 +5,5 @@ export class User {
     email?: string;
     password?: string;
     role: number = 0;
-    token?: string;
+    accessToken?: string;
 }
