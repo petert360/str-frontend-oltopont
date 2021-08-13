@@ -1,0 +1,42 @@
+<div class="container p-3">
+    <div class="row">
+        <h1>Oltási szövődmények</h1>
+
+        
+            <div class="col-12 d-grid mt-3 mb-3">
+                <button routerLink="/adverse-event/create" class="btn btn-success w-100">
+                    Új oltási szövődmény rögzítése
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Páciens</th>
+                            <th>Időpont</th>
+                            <th>Leírás</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ae of list$ | async">
+                            <td>{{ ae.patient }}</td>
+                            <td>{{ ae.date }}</td>
+                            <td>{{ ae.description }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button [routerLink]="['/', 'adverse-event', 'edit', ae._id]" class="btn btn-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+</div>
