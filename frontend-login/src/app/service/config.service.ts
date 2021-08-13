@@ -16,11 +16,11 @@ export class ConfigService {
   apiUrl = 'http://localhost:3000/';
 
   patientColumns: ITableCol[] = [
-    { key: 'olt_idopont', text: 'Idő' },
-    { key: 'pt_nev', text: 'Név' },
-    { key: 'pt_taj', text: 'TAJ' },
+    { key: 'appointment', text: 'Időpont' },
+    { key: 'name', text: 'Név' },
+    { key: 'persinalId', text: 'Azonosító' },
     { key: 'vaccine', text: 'Vakcina' },
-    { key: 'megjelent', text: 'Kész', checkbox: true },
+    { key: 'done', text: 'Kész', checkbox: false },
   ]
 
 

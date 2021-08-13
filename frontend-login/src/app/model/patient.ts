@@ -13,4 +13,5 @@ export class Patient {
     // riskGroup: string = '';
     vaccinations: Vaccination[] = []; 
     active: boolean = true;
+    done?: boolean = false;
 }
