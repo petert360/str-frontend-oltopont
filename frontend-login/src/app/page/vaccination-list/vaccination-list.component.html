@@ -1,0 +1,54 @@
+<div class="container p-3">
+    <div class="row">
+        <app-sidebar></app-sidebar>
+        <h1>Oltási események</h1>
+
+        
+            <div class="col-12 d-grid mt-3 mb-3">
+                <button routerLink="/vaccination/create" class="btn btn-success w-100">
+                    Új oltási esemény rögzítése
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Páciens</th>
+                            <th>Vakcina</th>
+                            <th>Dátum</th>
+                            <th>Oltás száma</th>
+                            <th>Oltás helye</th>
+                            <th>Oltás módja</th>
+                            <th>Oltási szövődmény</th>
+                            <th>EESZT dokumentáció</th>
+                            <th>Helyszín</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let vaccination of list$ | async">
+                            <td>{{ vaccination.patient }}</td>
+                            <td>{{ vaccination.vaccine }}</td>
+                            <td>{{ vaccination.date }}</td>
+                            <td>{{ vaccination.dose }}</td>
+                            <td>{{ vaccination.injectionSite }}</td>
+                            <td>{{ vaccination.injectionType }}</td>
+                            <td>{{ vaccination.adverseEvent }}</td>
+                            <td>{{ vaccination.eeszt }}</td>
+                            <td>{{ vaccination.place }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button [routerLink]="['/', 'vaccination', 'edit', vaccination._id]" class="btn btn-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+</div>
