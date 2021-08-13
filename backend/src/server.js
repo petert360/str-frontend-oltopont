@@ -27,7 +27,8 @@ const { username, password, host } = config.get('database');
 mongoose
     .connect(
         //'mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        `mongodb+srv://${username}:${password}@${host}`,
+        'mongodb://localhost:27017/myapp',
+        //`mongodb+srv://${username}:${password}@${host}`,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
