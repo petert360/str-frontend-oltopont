@@ -6,6 +6,11 @@ const VaccinationSchema = mongoose.Schema(
     _id: {
         type: mongoose.Schema.Types.ObjectId,
     }, */
+        patient: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Patient',
+            required: true,
+        },
         vaccine: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Vaccine',

@@ -15,6 +15,9 @@ import { JwtInterceptorService } from './service/jwt-interceptor.service';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { PatientListComponent } from './page/patient-list/patient-list.component';
 import { PlaceListComponent } from './page/place-list/place-list.component';
+import { AdverseEventListComponent } from './page/adverse-event-list/adverse-event-list.component';
+import { VaccinationListComponent } from './page/vaccination-list/vaccination-list.component';
+import { VaccineListComponent } from './page/vaccine-list/vaccine-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PlaceListComponent } from './page/place-list/place-list.component';
     AdminComponent,
     ForbiddenComponent,
     PatientListComponent,
-    PlaceListComponent
+    PlaceListComponent,
+    AdverseEventListComponent,
+    VaccinationListComponent,
+    VaccineListComponent
   ],
   imports: [
     BrowserModule,
