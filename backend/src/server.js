@@ -22,13 +22,15 @@ const swaggerDocument = YAML.load('./docs/swagger.yaml');
 
 // ha létezik a config, akkor elmentjük az értékeket változókba
 const { username, password, host } = config.get('database');
+const { mongooseConnectLocal, mongooseConnectAtlas } = config.get('mongooseConnect');
 
 // kapcsolódás az adatbázishoz
 mongoose
     .connect(
-        //'mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        'mongodb://localhost:27017/myapp',
-        //`mongodb+srv://${username}:${password}@${host}`,
+        `${mongooseConnectLocal}`,
+        // Atlas: 'mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+        // Local: 'mongodb://localhost:27017/oltopont',
+        // `mongodb+srv://${username}:${password}@${host}`,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,

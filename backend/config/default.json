@@ -3,5 +3,9 @@
         "username": "dbUser",
         "password": "dbUserPassword",
         "host": "cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    },
+    "mongooseConnect":     {
+        "mongooseConnectLocal": "mongodb://localhost:27017/oltopont",
+        "mongooseConnectAtlas": "mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     }
 }
