@@ -3,6 +3,7 @@ import { Vaccination } from "./vaccination";
 
 export class Patient {
     _id: string = '';
+    appointment?: Date = new Date();
     name: string = '';
     personalId: string = ''; // TAJ or any other personal ID number
     dob: Date = new Date();
