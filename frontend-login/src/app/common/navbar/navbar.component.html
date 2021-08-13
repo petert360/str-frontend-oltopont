@@ -26,7 +26,9 @@
                         <span>Üdvözlöm, {{ user?.first_name }}!</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" routerLink="/">Menüpont</a></li>
+                        <li>
+                            <p class="ml-4">Szerepkör: {{ user?.role}}</p>
+                        </li>
                         <li *ngIf="user" (click)="onLogout()"><a class="dropdown-item" routerLink="/login">Kilépés</a>
                         </li>
                     </ul>

@@ -35,7 +35,7 @@ const routes: Routes = [
     component: PatientListComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
-      expectedRole: 3,
+      expectedRole: 1,
     }
   },
   {
@@ -43,7 +43,7 @@ const routes: Routes = [
     component: VaccineListComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
-      expectedRole: 3,
+      expectedRole: 2,
     }
   },
   {
@@ -51,7 +51,7 @@ const routes: Routes = [
     component: PlaceListComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
-      expectedRole: 3,
+      expectedRole: 2,
     }
   },
   {
@@ -59,7 +59,7 @@ const routes: Routes = [
     component: AdverseEventListComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
-      expectedRole: 3,
+      expectedRole: 2,
     }
   },
   {
@@ -67,7 +67,7 @@ const routes: Routes = [
     component: VaccinationListComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
-      expectedRole: 3,
+      expectedRole: 2,
     }
   },
 

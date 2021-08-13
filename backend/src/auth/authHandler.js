@@ -3,19 +3,25 @@ const jwt = require('jsonwebtoken');
 // Felhasználók adatbázisa:
 const Users = [
     {
-        email: 'admin',
-        password: 'admin_pw',
-        role: 'admin',
+        first_name: "Admin",
+        last_name: "Admin",
+        email: 'admin@gmail.com',
+        password: 'admin',
+        role: '3',
     },
     {
-        email: 'user',
-        password: 'user_pw',
-        role: 'user',
+        first_name: "Orvos",
+        last_name: "Orvos",
+        email: 'orvos@gmail.com',
+        password: 'orvos',
+        role: '2',
     },
     {
-        email: 'a@a.com',
-        password: 'test',
-        role: 'user',
+        first_name: "Ápoló",
+        last_name: "Ápoló",
+        email: 'apolo@gmail.com',
+        password: 'apolo',
+        role: '1',
     },
 
 ];
