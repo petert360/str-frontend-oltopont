@@ -12,6 +12,6 @@ export class PatientService extends BaseService<Patient> {
     public http: HttpClient
   ) {
     super(http);
-    this.entity = 'patients';
+    this.entity = 'patient';
   }
 }

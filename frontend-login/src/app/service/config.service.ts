@@ -11,7 +11,7 @@ export interface ITableCol {
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService {-
+export class ConfigService {
 
   apiUrl = 'http://localhost:3000/';
 

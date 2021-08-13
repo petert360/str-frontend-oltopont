@@ -27,7 +27,7 @@ const { mongooseConnectLocal, mongooseConnectAtlas } = config.get('mongooseConne
 // kapcsolódás az adatbázishoz
 mongoose
     .connect(
-        `${mongooseConnectLocal}`,
+        `${mongooseConnectAtlas}`,
         // Atlas: 'mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
         // Local: 'mongodb://localhost:27017/oltopont',
         // `mongodb+srv://${username}:${password}@${host}`,
