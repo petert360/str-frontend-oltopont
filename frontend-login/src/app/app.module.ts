@@ -14,6 +14,7 @@ import { AdminComponent } from './page/admin/admin.component';
 import { JwtInterceptorService } from './service/jwt-interceptor.service';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { PatientListComponent } from './page/patient-list/patient-list.component';
+import { PlaceListComponent } from './page/place-list/place-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PatientListComponent } from './page/patient-list/patient-list.component
     HomeComponent,
     AdminComponent,
     ForbiddenComponent,
-    PatientListComponent
+    PatientListComponent,
+    PlaceListComponent
   ],
   imports: [
     BrowserModule,
