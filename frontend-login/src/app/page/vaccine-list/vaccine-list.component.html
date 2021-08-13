@@ -1,0 +1,45 @@
+<div class="container p-3">
+    <div class="row">
+        <app-sidebar></app-sidebar>
+        <h1>Vakcinák</h1>
+
+        
+            <div class="col-12 d-grid mt-3 mb-3">
+                <button routerLink="/vaccine/create" class="btn btn-success w-100">
+                    Új vakcina rögzítése
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Gyártó</th>
+                            <th>Vakcina</th>
+                            <th>LOT</th>
+                            <th>Dózisok közötti idő</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let vaccine of list$ | async">
+                            <td>{{ vaccine.manufacture }}</td>
+                            <td>{{ vaccine.product }}</td>
+                            <td>{{ vaccine.lot }}</td>
+                            <td>{{ vaccine.doseInterval }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button [routerLink]="['/', 'vaccine', 'edit', vaccine._id]" class="btn btn-info">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+</div>
