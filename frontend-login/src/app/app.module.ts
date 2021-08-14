@@ -18,6 +18,8 @@ import { PlaceListComponent } from './page/place-list/place-list.component';
 import { AdverseEventListComponent } from './page/adverse-event-list/adverse-event-list.component';
 import { VaccinationListComponent } from './page/vaccination-list/vaccination-list.component';
 import { VaccineListComponent } from './page/vaccine-list/vaccine-list.component';
+import { AdverseEventEditComponent } from './page/adverse-event-edit/adverse-event-edit.component';
+import { AdverseEventCreateComponent } from './page/adverse-event-create/adverse-event-create.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { VaccineListComponent } from './page/vaccine-list/vaccine-list.component
     PlaceListComponent,
     AdverseEventListComponent,
     VaccinationListComponent,
-    VaccineListComponent
+    VaccineListComponent,
+    AdverseEventEditComponent,
+    AdverseEventCreateComponent
   ],
   imports: [
     BrowserModule,

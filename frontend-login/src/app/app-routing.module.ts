@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './page/admin/admin.component';
+import { AdverseEventCreateComponent } from './page/adverse-event-create/adverse-event-create.component';
+import { AdverseEventEditComponent } from './page/adverse-event-edit/adverse-event-edit.component';
 import { AdverseEventListComponent } from './page/adverse-event-list/adverse-event-list.component';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { HomeComponent } from './page/home/home.component';
@@ -57,6 +59,22 @@ const routes: Routes = [
   {
     path: 'adverse-events',
     component: AdverseEventListComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 2,
+    }
+  },
+  {
+    path: 'adverse-event/create',
+    component: AdverseEventCreateComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 2,
+    }
+  },
+  {
+    path: 'adverse-event/edit/:id',
+    component: AdverseEventEditComponent,
     canActivate: [AuthGuardService, RoleGuardService],
     data: {
       expectedRole: 2,

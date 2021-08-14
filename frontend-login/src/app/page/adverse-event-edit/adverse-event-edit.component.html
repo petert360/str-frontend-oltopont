@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6 offset-3 mt-3">
+        <form #aeForm="ngForm" (ngSubmit)="onSave()">
+            <div class="form-group">
+                <label for="">Páciens</label>
+                <input class="form-control" type="text" name="patient" [(ngModel)]="ae.patient">
+                <label for="">Dátum</label>
+                <input class="form-control" type="date" name="date" [(ngModel)]="ae.date">
+                <label for="">Leírás</label>
+                <input class="form-control" type="text" name="description" [(ngModel)]="ae.description">
+            </div>
+            <button [disabled]="aeForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
+                <i class="fas fa-save"></i>
+                Oltási szövődmény mentése
+            </button>
+        </form>
+    </div>
+</div>
