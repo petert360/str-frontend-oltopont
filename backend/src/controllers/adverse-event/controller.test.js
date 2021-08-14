@@ -6,37 +6,32 @@ const service = require('./service');
 
 jest.mock('./service');
 
-describe("vaccine controller", () => {
+describe("adverse-event controller", () => {
     const mockData = [{
         "id": 1,
-        "manufacture": "Manufacture1",
-        "product": "Product1",
-        "lot": "1",
-        "doseInterval": "1"
+        "patient": "Patient1",
+        "date": "2000-01-01",
+        "description": "Description1",
     }, {
         "id": 2,
-        "manufacture": "Manufacture2",
-        "product": "Product2",
-        "lot": "2",
-        "doseInterval": "2"
+        "patient": "Patient2",
+        "date": "2000-01-02",
+        "description": "Description2",
     }, {
         "id": 3,
-        "manufacture": "Manufacture3",
-        "product": "Product3",
-        "lot": "3",
-        "doseInterval": "3"
+        "patient": "Patient3",
+        "date": "2000-01-03",
+        "description": "Description3",
     }, {
         "id": 4,
-        "manufacture": "Manufacture4",
-        "product": "Product4",
-        "lot": "4",
-        "doseInterval": "4"
+        "patient": "Patient4",
+        "date": "2000-01-04",
+        "description": "Description4",
     }, {
         "id": 5,
-        "manufacture": "Manufacture5",
-        "product": "Product5",
-        "lot": "5",
-        "doseInterval": "5"
+        "patient": "Patient5",
+        "date": "2000-01-05",
+        "description": "Description5",
     }];
 
     let response;

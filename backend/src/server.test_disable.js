@@ -20,9 +20,10 @@ describe('REST API integration tests', () => {
 
     beforeEach(done => {
         const { username, password, host } = config.get('database');
+        const { mongooseConnectLocal, mongooseConnectAtlas } = config.get('mongooseConnect');
         // a csatlakozás a server.js-ből
         mongoose
-            .connect(`mongodb+srv://${username}:${password}@${host}`, {
+            .connect(`${mongooseConnectAtlas}`, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             })
