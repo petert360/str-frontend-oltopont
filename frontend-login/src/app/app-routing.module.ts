@@ -16,6 +16,8 @@ import { PlaceListComponent } from './page/place-list/place-list.component';
 import { VaccinationCreateComponent } from './page/vaccination-create/vaccination-create.component';
 import { VaccinationEditComponent } from './page/vaccination-edit/vaccination-edit.component';
 import { VaccinationListComponent } from './page/vaccination-list/vaccination-list.component';
+import { VaccineCreateComponent } from './page/vaccine-create/vaccine-create.component';
+import { VaccineEditComponent } from './page/vaccine-edit/vaccine-edit.component';
 import { VaccineListComponent } from './page/vaccine-list/vaccine-list.component';
 import { AuthGuardService } from './service/auth-guard.service';
 import { RoleGuardService } from './service/role-guard.service';
@@ -62,7 +64,6 @@ const routes: Routes = [
       expectedRole: 1,
     }
   },
-
   {
     path: 'vaccines',
     component: VaccineListComponent,
@@ -71,6 +72,23 @@ const routes: Routes = [
       expectedRole: 2,
     }
   },
+  {
+    path: 'vaccine/create',
+    component: VaccineCreateComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 2,
+    }
+  },
+  {
+    path: 'vaccine/edit/:id',
+    component: VaccineEditComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 2,
+    }
+  },
+
   {
     path: 'places',
     component: PlaceListComponent,

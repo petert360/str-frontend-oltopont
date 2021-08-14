@@ -26,6 +26,8 @@ import { PlaceCreateComponent } from './page/place-create/place-create.component
 import { PlaceEditComponent } from './page/place-edit/place-edit.component';
 import { VaccinationEditComponent } from './page/vaccination-edit/vaccination-edit.component';
 import { VaccinationCreateComponent } from './page/vaccination-create/vaccination-create.component';
+import { VaccineCreateComponent } from './page/vaccine-create/vaccine-create.component';
+import { VaccineEditComponent } from './page/vaccine-edit/vaccine-edit.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { VaccinationCreateComponent } from './page/vaccination-create/vaccinatio
     PlaceCreateComponent,
     PlaceEditComponent,
     VaccinationEditComponent,
-    VaccinationCreateComponent
+    VaccinationCreateComponent,
+    VaccineCreateComponent,
+    VaccineEditComponent
   ],
   imports: [
     BrowserModule,
