@@ -12,7 +12,6 @@ export class PatientListComponent implements OnInit {
 
   list$: Observable<Patient[]> = this.patientService.getAll();
 
-
   constructor(
     private patientService: PatientService,
   ) { }

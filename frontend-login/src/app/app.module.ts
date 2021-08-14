@@ -20,6 +20,8 @@ import { VaccinationListComponent } from './page/vaccination-list/vaccination-li
 import { VaccineListComponent } from './page/vaccine-list/vaccine-list.component';
 import { AdverseEventEditComponent } from './page/adverse-event-edit/adverse-event-edit.component';
 import { AdverseEventCreateComponent } from './page/adverse-event-create/adverse-event-create.component';
+import { PatientCreateComponent } from './page/patient-create/patient-create.component';
+import { PatientEditComponent } from './page/patient-edit/patient-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AdverseEventCreateComponent } from './page/adverse-event-create/adverse
     VaccinationListComponent,
     VaccineListComponent,
     AdverseEventEditComponent,
-    AdverseEventCreateComponent
+    AdverseEventCreateComponent,
+    PatientCreateComponent,
+    PatientEditComponent
   ],
   imports: [
     BrowserModule,

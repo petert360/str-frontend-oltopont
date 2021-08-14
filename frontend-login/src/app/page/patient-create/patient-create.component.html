@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-6 offset-3 mt-3">
+        <form #aeForm="ngForm" (ngSubmit)="onSave()">
+            <div class="form-group">
+                <label for="">Időpont</label>
+                <input class="form-control" type="date" name="appointment" [(ngModel)]="patient.appointment">
+                <label for="">Név</label>
+                <input class="form-control" type="text" name="name" [(ngModel)]="patient.name">
+                <label for="">TAJ vagy egyéb személy azonosító</label>
+                <input class="form-control" type="text" name="personalId" [(ngModel)]="patient.personalId">
+                <label for="">Születési dátum</label>
+                <input class="form-control" type="date" name="dob" [(ngModel)]="patient.dob">
+                <label for="">Telefon</label>
+                <input class="form-control" type="text" name="phone" [(ngModel)]="patient.phone">
+                <label for="">Email</label>
+                <input class="form-control" type="text" name="email" [(ngModel)]="patient.email">
+                <label for="">Vakcina</label>
+                <input class="form-control" type="text" name="vaccine" [(ngModel)]="patient.vaccine">
+                <label for="">Oltások</label>
+                <input class="form-control" type="text" name="vaccinations" [(ngModel)]="patient.vaccinations">
+            </div>
+            <button [disabled]="aeForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
+                <i class="fas fa-save"></i>
+                Páciens mentése
+            </button>
+        </form>
+    </div>
+</div>

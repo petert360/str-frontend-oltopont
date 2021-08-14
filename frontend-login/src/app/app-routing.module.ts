@@ -7,6 +7,8 @@ import { AdverseEventListComponent } from './page/adverse-event-list/adverse-eve
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
+import { PatientCreateComponent } from './page/patient-create/patient-create.component';
+import { PatientEditComponent } from './page/patient-edit/patient-edit.component';
 import { PatientListComponent } from './page/patient-list/patient-list.component';
 import { PlaceListComponent } from './page/place-list/place-list.component';
 import { VaccinationListComponent } from './page/vaccination-list/vaccination-list.component';
@@ -40,6 +42,23 @@ const routes: Routes = [
       expectedRole: 1,
     }
   },
+  {
+    path: 'patient/create',
+    component: PatientCreateComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 1,
+    }
+  },
+  {
+    path: 'patient/edit/:id',
+    component: PatientEditComponent,
+    canActivate: [AuthGuardService, RoleGuardService],
+    data: {
+      expectedRole: 1,
+    }
+  },
+
   {
     path: 'vaccines',
     component: VaccineListComponent,
