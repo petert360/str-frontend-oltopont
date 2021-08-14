@@ -28,7 +28,7 @@
                             <td>{{ patient.appointment }}</td>
                             <td>{{ patient.name }}</td>
                             <td>{{ patient.personalId }}</td>
-                            <td>{{ patient.vaccine }}</td>
+                            <td>{{ patient.vaccine._id }}</td>
                             <td>
                                 <div class="btn-group">
                                     <button [routerLink]="['/', 'patient', 'edit', patient._id]" class="btn btn-info">

@@ -3,7 +3,7 @@
         <form #patientForm="ngForm" (ngSubmit)="onSave()">
             <div class="form-group">
                 <label for="">Időpont</label>
-                <input class="form-control" type="date" name="appointment" [(ngModel)]="patient.appointment">
+                <input class="form-control" type="text" name="appointment" [(ngModel)]="patient.appointment">
                 <label for="">Név</label>
                 <input class="form-control" type="text" name="name" [(ngModel)]="patient.name">
                 <label for="">TAJ vagy egyéb személy azonosító</label>
@@ -15,7 +15,7 @@
                 <label for="">email</label>
                 <input class="form-control" type="text" name="email" [(ngModel)]="patient.email">
                 <label for="">Vakcina</label>
-                <input class="form-control" type="text" name="vaccine" [(ngModel)]="patient.vaccine">
+                <input class="form-control" type="text" name="vaccine" [(ngModel)]="patient.vaccine._id">
                 <label for="">Oltások</label>
                 <input class="form-control" type="text" name="vaccinations" [(ngModel)]="patient.vaccinations">
             </div>
