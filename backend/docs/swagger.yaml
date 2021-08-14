@@ -98,10 +98,24 @@ components:
       properties:
         property:
           type: integer
+    AdverseEvent:
+      type: object
+      required:
+        - patient
+        - date
+        - description
+      properties:
+        patient:
+            type: string
+        date:
+            type: string
+        description: 
+            type: string
     Person:
       type: object
       required:
         - name
+        - appointment
         - personalId
         - dob
         - phone
@@ -110,6 +124,8 @@ components:
         - active
       properties:
         name: 
+            type: string
+        appointment: 
             type: string
         personalId: 
             type: string
@@ -124,7 +140,7 @@ components:
         vaccinations: 
             type: string
         active: 
-            type: booleana
+            type: boolean
     Error:
       type: object
       required:
