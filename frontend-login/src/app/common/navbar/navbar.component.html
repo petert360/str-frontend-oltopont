@@ -29,6 +29,25 @@
                         <li>
                             <p class="ml-4">Szerepkör: {{ user?.role}}</p>
                         </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/patients">Páciensek</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/vaccinations">Oltási események</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/vaccines">Vakcinák</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/places">Helyszínek</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/adverse-events">Oltási szövődmények</a>
+                        </li>
+
+
+
+
                         <li *ngIf="user" (click)="onLogout()"><a class="dropdown-item" routerLink="/login">Kilépés</a>
                         </li>
                     </ul>
