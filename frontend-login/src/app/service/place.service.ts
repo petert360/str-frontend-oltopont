@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Place } from '../model/place';
 import { BaseService } from './base.service';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,10 @@ import { BaseService } from './base.service';
 export class PlaceService extends BaseService<Place> {
 
   constructor(
+    public config: ConfigService,
     public http: HttpClient
   ) {
-    super(http);
+    super(config, http);
     this.entity = 'place';
   }
 }
