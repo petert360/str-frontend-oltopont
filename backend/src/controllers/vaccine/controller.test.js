@@ -1,61 +1,66 @@
 const { mockRequest, mockResponse } = require('jest-mock-req-res');
 const createError = require('http-errors');
 
-const personController = require('./person.controller');
-const personService = require('./person.service');
+const controller = require('./controller');
+const service = require('./service');
 
-jest.mock('./person.service');
+jest.mock('./service');
 
-describe("person controler", () => {
+describe("person controller", () => {
     const mockData = [{
         "id": 1,
-        "first_name": "Fiorenze",
-        "last_name": "Dyneley",
-        "email": "fdyneley0@narod.ru"
+        "manufacture": "Manufacture1",
+        "product": "Product1",
+        "lot": "1",
+        "doseInterval": "1"
     }, {
         "id": 2,
-        "first_name": "Owen",
-        "last_name": "Jirka",
-        "email": "ojirka1@squidoo.com"
+        "manufacture": "Manufacture2",
+        "product": "Product2",
+        "lot": "2",
+        "doseInterval": "2"
     }, {
         "id": 3,
-        "first_name": "Terra",
-        "last_name": "Hurdman",
-        "email": "thurdman2@reverbnation.com"
+        "manufacture": "Manufacture3",
+        "product": "Product3",
+        "lot": "3",
+        "doseInterval": "3"
     }, {
         "id": 4,
-        "first_name": "Thomasin",
-        "last_name": "de Keep",
-        "email": "tdekeep3@fc2.com"
+        "manufacture": "Manufacture4",
+        "product": "Product4",
+        "lot": "4",
+        "doseInterval": "4"
     }, {
         "id": 5,
-        "first_name": "Lawrence",
-        "last_name": "Tearle",
-        "email": "ltearle4@infoseek.co.jp"
+        "manufacture": "Manufacture5",
+        "product": "Product5",
+        "lot": "5",
+        "doseInterval": "5"
     }];
 
     let response;
     const nextFunction = jest.fn();
 
     beforeEach(() => {
-        personService.__setMockData(mockData);
+        service.__setMockData(mockData);
         response = mockResponse();
     });
 
     test("find one with valid id", () => {
-        const PERSON_ID = 1;
+        const ID = 1;
 
         const request = mockRequest({
             params: {
-                id: PERSON_ID
+                id: ID
             }
         });
 
-        return personController.findOne(request, response, nextFunction)
+        return controller.findOne(request, response, nextFunction)
             .then( () => {
-                expect(personService.findOne).toBeCalledWith(PERSON_ID);
+                expect(service.findOne).toBeCalledWith(ID);
                 expect(response.json).toBeCalledWith(
-                    mockData.find(p => p.id === PERSON_ID)
+                    mockData.find(p => p.id === ID)
                 );                
             })
     });
