@@ -1,11 +1,23 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Sample Blog API
-  description: A sample blog API to illustrate REST API concepts
+  title: Fullstack Vizsgaremek - Oltópont API
+  description: API for the FullStack Vizsgaremek
 servers:
   - url: http://localhost:3000
 paths:
+  /patient:
+    get:
+      description: Returns a list of patients
+      responses:
+        '200':
+          description: List of patients returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Patient'
   /person:
     get:
       description: Returns a list of persons
@@ -81,19 +93,38 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
+    Patient:
+      type: object
+      properties:
+        property:
+          type: integer
     Person:
       type: object
       required:
-        - first_name
-        - last_name
+        - name
+        - personalId
+        - dob
+        - phone
         - email
+        - vaccine
+        - active
       properties:
-        first_name:
-          type: string
-        last_name:
-          type: string
-        email:
-          type: string
+        name: 
+            type: string
+        personalId: 
+            type: string
+        dob: 
+            type: string
+        phone: 
+            type: string
+        email: 
+            type: string
+        vaccine: 
+            type: string
+        vaccinations: 
+            type: string
+        active: 
+            type: booleana
     Error:
       type: object
       required:
