@@ -46,11 +46,24 @@ A frontend oldal és függőségeinek telepítése:
 
  - Docker konténer felépítése és futtatása: `docker-compose up`
 
+## Belépés az alkalmazásba
+Az alkalmazásba történő belépéséhez használható e-mail cím és jelszó párosok:
+
+| E-mail          | Jelszó |
+| :----:          | :----: |
+| admin@gmail.com | admin  |
+| orvos@gmail.com | orvos  |
+| nover@gmail.com | nover  |
+
+
+
 ## Az alkalmazás konfigurálása
 
 A `base.service.ts` állományban meg kell adni az API végpont elérési útvonalát.
 
-### Az alkalmazásban használt entitások részletei
+## Entitások
+
+Az alkalmazásban használt entitások részletei:
 
 ```javascript
 class Patient {
