@@ -268,6 +268,7 @@ A feladat elkészült, ha:
 
 ## Fejlesztési lehetőségek
 
+- Páciens adatok feltöltése CSV állományból
 - Páciens adatok beolvasása QR kód segítségével.
 - Páciens adatok exportálása külső rendszer számára.
 - Statisztikák készítése
