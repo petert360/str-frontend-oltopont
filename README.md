@@ -23,115 +23,254 @@ A feladat elkészült, ha:
 - reszponzív belépési űrlap létrehozása,
 - űrlap validáció megvalósítása.
 
-### Felhasználói történet #2
+---
 
-Adminisztrátorként szükségem van arra, hogy a rendszerhez hozzáférő felhasználók autentikációs adatai külön erre a célra létrehozott adatbázisban legyenek, annak érdekében, hogy a fejhasználói név-jelszó párosok jól elkülönülten, biztonságban legyenek.
+## Eposz #2 - Páciens adatok
 
-#### Elfogadási kritérium
-
-A feladat elkészült, ha:
-
-- A felhasználói adatbázis elkészült.
-- A felhasználói adatbázishoz rendszergazda által felhasználó-jelszó párosok adhatók.
-
-#### Feladatok
-
-- adatbázis létrehozása,
-- jelszavak titkosított tárolása,
-- felhasználói adatbázis kezelés.
-
-## Eposz #2 - Adatok feltöltése
-
-Adminisztrátorként szükségem van arra, hogy páciens adatokat tudjak feltölteni az adatbázisba, hogy a külső féltől érkező adatok az adminisztrációs rendszer részei legyenek.
+Adminisztrátorként szükségem van arra, hogy a páciens adatok táblázatos formában megjelenjenek, hogy a páciens forgalom átlátható legyen.
 
 ### Felhasználói történet #1
 
-Adminisztrátorként szükségem van arra, hogy a feltöltendő adatok CSV formátumban rendelkezésre álljanak, mert az előjegyzési listák a külső féltől Microsoft Excel formátumban érkeznek, és a CSV feldolgozása az adatbázis számára egyszerűbb. Megjegyzés: ez a felhasználói történet nem az applikáció szoros része, a konverzió az applikáción kívül történik meg.
+Adminisztrátorként szükségem van arra, hogy a páciens lista táblázatos formában megjelenjen, így az páciens forgalom folyamatosan nyomon követhető.
 
 #### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
-- A külső féltől érkezett XLSX -> CSV átalakítás megvalósul.
+- A páciens lista egy reszponzív oldalon táblázatos formában megjelenik.
 
 #### Feladatok
 
-- XLSX -> CSV átalakítás megoldása.
+- Reszponzív páciens lista oldal elkészítése.
 
 ### Felhasználói történet #2
 
-Adminisztrátorként szükségem van arra, hogy a CSV file-t az alkalmazás "Feltöltés oldalán" az adatbázisba feltölthessem, hogy az előjegyzési, illetve páciens adatok az adatbázisban elérhetővé váljanak.
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeihez szerkesztés funkció tartozzon, annak érdekében, hogy az adatok változását rögzíteni lehessen.
 
 #### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
-- Az alkalmazás feltöltés oldala rendelkezésre áll, és működőképes a feltöltés funkció: a feltöltendő CSV-ben szereplő adatok az adatbáziban megjelennek.
+- A pácines lista elemeihez szerkesztés funkció tartozik.
 
 #### Feladatok
 
-- Feltöltés oldal frontend megvalósítása.
-- Feltöltés funkció backend megvalósítása.
+- A páciens lista elemeihez adatok szerkesztése funkció hozzárendelése.
 
-## Eposz #3 - Napi adatok megjelenítése
+### Felhasználói történet #3
 
-Adminisztrátorként szükségem van arra, hogy a napi páciens és oltási adatok táblázatos formában megjelenjenek, hogy a napi forgalom átlátható legyen.
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisban új pácienst lehessen rögzíteni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A páciens lista elemeihez létrehozás funkció tartozik.
+
+#### Feladatok
+
+- A páciens lista elemeihez létrehozás funkció hozzárendelése.
+
+---
+
+## Eposz #3 - Vakcina adatok
+
+Adminisztrátorként szükségem van arra, hogy a vakcina adatok táblázatos formában megjelenjenek, hogy a vakcina adatbázis átlátható legyen.
 
 ### Felhasználói történet #1
 
-Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista táblázatában az egyes sorok elemein  táblázatos formában megjelenjen, így az aktuális napi páciens forgalom folyamatosan nyomon követhető.
+Adminisztrátorként szükségem van arra, hogy a vakcina lista táblázatos formában megjelenjen, így az adatbázisban elérhető vakcinák nyomon követhetők.
 
 #### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
-- Az aktuális napi lista egy reszponzív oldalon táblázatos formában megjelenik.
+- A vakcina lista egy reszponzív oldalon táblázatos formában megjelenik.
 
 #### Feladatok
 
-- Reszponzív napi lista oldal elkészítése.
+- Reszponzív vakcina lista oldal elkészítése.
 
 ### Felhasználói történet #2
 
-Adminisztrátorként szükségem van arra, hogy az aktuális napi előjegyzési lista elemeihez törlés és részletek megtekintése funkciók tartozzanak, annak érdekében, hogy a páciens adatainak részletei megtekinthetőek vagy az adatok törlése magvalósítható legyen.
+Adminisztrátorként szükségem van arra, hogy a vakcina lista elemeihez szerkesztés funkció tartozzon, annak érdekében, hogy a vakcinák adatait módosítani lehessen.
 
 #### Elfogadási kritérium
 
 A feladat elkészült, ha:
 
-- A napi lista elemeihez részletek megtekintése funkció tartozik.
-- A napi lista elemeihez törlés funkció tartozik.
+- A vakcina lista elemeihez szerkesztés funkció tartozik.
 
 #### Feladatok
 
-- A napi lista elemeihez páciens részletek megjelenítése, törlés funkció hozzárendelése.
-- A páciens részletek oldal elkészítése.
-- Törleés funkció megvalósítása az adatbázis kezelésben.
+- A vakcina lista elemeihez adatok szerkesztése funkció hozzárendelése.
 
-## Eposz #4 - Statisztika
+### Felhasználói történet #3
 
-Adminisztrátorként szükségem van arra, hogy statisztikai lekérdezéseket végezhessek az adatbázisban tárolt adatokról, annak érdekében, hogy az oltásokkal, páciens forgalommal kapcsolatos kimutatásokat, statisztikákat készíthessek.
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új vakcinát lehessen rögzíteni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A vakcina lista elemeihez létrehozás funkció tartozik.
+
+#### Feladatok
+
+- A vakcina lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+---
+
+## Eposz #4 - Oltási események
+
+Adminisztrátorként szükségem van arra, hogy az oltási események táblázatos formában megjelenjenek, hogy az oltási esemény adatbázis átlátható legyen.
 
 ### Felhasználói történet #1
 
-[...]
+Adminisztrátorként szükségem van arra, hogy az oltási események listáj táblázatos formában megjelenjen, így az adatbázisba felvitt oltási események nyomon követhetők.
 
 #### Elfogadási kritérium
 
-[...]
-
 A feladat elkészült, ha:
 
-[...]
+- Az oltási esemény lista egy reszponzív oldalon táblázatos formában megjelenik.
 
 #### Feladatok
 
-[...]
+- Reszponzív oltási esemény lista oldal elkészítése.
+
+### Felhasználói történet #2
+
+Adminisztrátorként szükségem van arra, hogy az oltási események lista elemeihez szerkesztés funkció tartozzon, annak érdekében, hogy az oltási események adatait módosítani lehessen.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási esemény lista elemeihez szerkesztés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási események lista elemeihez adatok szerkesztése funkció hozzárendelése.
+
+### Felhasználói történet #3
+
+Adminisztrátorként szükségem van arra, hogy az oltási események lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új oltási eseményt lehessen rögzíteni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A oltási esemény lista elemeihez létrehozás funkció tartozik.
+
+#### Feladatok
+
+- A oltási esemény lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+---
+
+## Eposz #5 - Helyszínek
+
+Adminisztrátorként szükségem van arra, hogy az oltás beadásának helyszínei táblázatos formában megjelenjenek, hogy oltópont adatbázis átlátható legyen.
+
+### Felhasználói történet #1
+
+Adminisztrátorként szükségem van arra, hogy az oltások helyszínének listája táblázatos formában megjelenjen, így az adatbázisban elérhető oltási helyszínek áttekinthetők.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási helyszín lista egy reszponzív oldalon táblázatos formában megjelenik.
+
+#### Feladatok
+
+- Reszponzív oltási helyszín lista oldal elkészítése.
+
+### Felhasználói történet #2
+
+Adminisztrátorként szükségem van arra, hogy az oltási helyszín lista elemeihez szerkesztés funkció tartozzon, annak érdekében, hogy az oltási helyszínek adatait módosítani lehessen.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási helyszín lista elemeihez szerkesztés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási helyszín lista elemeihez adatok szerkesztése funkció hozzárendelése.
+
+### Felhasználói történet #3
+
+Adminisztrátorként szükségem van arra, hogy az oltási helyszín lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új oltási helyszínt lehessen rögzíteni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A oltási helyszín lista elemeihez létrehozás funkció tartozik.
+
+#### Feladatok
+
+- A oltási helyszín lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+---
+
+## Eposz #6 - Oltási szövődmények
+
+Adminisztrátorként szükségem van arra, hogy az oltási szövődmények táblázatos formában megjelenjenek, hogy az oltással kapcsolatos szövődmények átláthatók legyenek.
+
+### Felhasználói történet #1
+
+Adminisztrátorként szükségem van arra, hogy az oltások szövődményeinek listája táblázatos formában megjelenjen, így az adatbázisban rögzített oltási szövődmények áttekinthetők.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási szövődmény lista egy reszponzív oldalon táblázatos formában megjelenik.
+
+#### Feladatok
+
+- Reszponzív oltási szövődmény lista oldal elkészítése.
+
+### Felhasználói történet #2
+
+Adminisztrátorként szükségem van arra, hogy az oltási szövődmény lista elemeihez szerkesztés funkció tartozzon, annak érdekében, hogy az oltási szövődmények adatait módosítani lehessen.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási szövődmény lista elemeihez szerkesztés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási szövődmény lista elemeihez adatok szerkesztése funkció hozzárendelése.
+
+### Felhasználói történet #3
+
+Adminisztrátorként szükségem van arra, hogy az oltási szövődmények lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új oltási szövődményt lehessen rögzíteni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A oltási szövődmény lista elemeihez létrehozás funkció tartozik.
+
+#### Feladatok
+
+- A oltási szövődmény lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+---
+
 
 ## Fejlesztési lehetőségek
 
 - Páciens adatok beolvasása QR kód segítségével.
 - Páciens adatok exportálása külső rendszer számára.
+- Statisztikák készítése
 
 ---
 
