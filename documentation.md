@@ -2,7 +2,7 @@
 
 ## Az alkalmazás célja
 
-Az alkalmazás egy kórházi oltópont adminisztrációs felületét valósítja meg. Feladatai többek között az előjegyzett, illetve az oltópontra érkezett páciensek adatainak kezelése, a személyzet számára az aktuális napi páciens lista megjelenítése, módosítása (pl. megadott szempontok szerinti szűrés, rendezés, páciens adatok részleteinek megjelenítése, páciens adat felvétel-törlés-módosítás). További feladata statisztikák megjelenítése, mint például a napi forgalom: várható ill. megérkezett páciensek, beadott oltások száma.
+Az alkalmazás egy kórházi oltópont adminisztrációs felületét valósítja meg. A felhasználó bejelentkezését követően felhasználó szerepkörétől függően lehetővé válik az oltásra váró páciensek adatainak kezelése: páciensek listájának megjelenítése, új páciens adatainak felvétele és módosítása. További feladata a vakcinák, oltási események, oltási szövődmények, és az oltás helyszínek adatainak kezelése (táblázatos megjelenítés, szerkesztés, új adat létrehozása).
 
 ## Az alkalmazás telepítése
 
@@ -24,12 +24,13 @@ A `base.service.ts` állományban meg kell adni az API végpont elérési útvon
 class Patient {
     _id: string = '';
     name: string = '';
-    personalId: string = ''; 
+    appointment: Date = new Date();
+    personalId: string = '';
     dob: Date = new Date();
     phone: string = '';
     email: string = '';
     vaccine: Vaccine = new Vaccine;
-    vaccinations: Vaccination[] = []; 
+    vaccinations?: Vaccination[] = [];
     active: boolean = true;
 }
 
@@ -41,8 +42,9 @@ class Vaccine {
     doseInterval: number = 0;
 }
 
- class Vaccination {
+class Vaccination {
     _id: string = '';
+    patient: Patient = new Patient();
     vaccine: Vaccine = new Vaccine;
     date: Date = new Date();
     dose: number = 0;
@@ -63,7 +65,7 @@ class Place {
 class AdverseEvent {
     _id: string = '';
     patient: Patient = new Patient;
-    reported: Date = new Date(); 
+    date: Date = new Date();
     description: string = '';
 }
 ```
@@ -74,7 +76,9 @@ A megadott Docker Container indítása és inicializálása.
 
 ## A végpontok dokumentációja
 
-Végpontok dokumentációja Swagger segítségével.
+Végpontok dokumentációja Swagger segítségével történt, elérése a backend oldalon az alábbi végponton:
+
+`/api-docs`
 
 ## Linkek
 
