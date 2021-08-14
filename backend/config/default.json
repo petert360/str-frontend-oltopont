@@ -6,6 +6,6 @@
     },
     "mongooseConnect":     {
         "mongooseConnectLocal": "mongodb://localhost:27017/oltopont",
-        "mongooseConnectAtlas": "mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        "mongooseConnectAtlas": "mongodb+srv://dbUser:dbUserPassword@cluster0.6apci.mongodb.net/oltopont?retryWrites=true&w=majority"
     }
 }
