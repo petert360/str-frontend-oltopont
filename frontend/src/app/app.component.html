@@ -1,4 +1,19 @@
 <app-navbar></app-navbar>
+<div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-2 col-md-10 offset-md-1">
+        <app-sidebar *ngIf="user"></app-sidebar>
+        <div class="col-10 col-md-8 offset-md-2">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- <app-navbar></app-navbar>
 
 <div class="container-fluid">
     <div class="row">
@@ -10,4 +25,4 @@
             <app-footer></app-footer>
         </main>
     </div>
-</div>
+</div> -->
