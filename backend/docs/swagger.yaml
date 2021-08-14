@@ -10,32 +10,32 @@ paths:
     get:
       description: Returns a list of patients
       responses:
-        '200':
+        "200":
           description: List of patients returned successfully
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Patient'
+                  $ref: "#/components/schemas/Patient"
   /person:
     get:
       description: Returns a list of persons
       responses:
-        '200':
+        "200":
           description: List of persons returned successfully
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Person'
-        '500':
+                  $ref: "#/components/schemas/Person"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
     post:
       description: Creates a new person
       requestBody:
@@ -43,26 +43,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Person'
+              $ref: "#/components/schemas/Person"
       responses:
-        '201':
+        "201":
           description: Person has been created successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Person'
-        '400':
+                $ref: "#/components/schemas/Person"
+        "400":
           description: Invalid request
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
   /person/{person_id}:
     get:
       description: Returns the person with the given ID
@@ -73,24 +73,24 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Person data returned successfully
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Person'
-        '404':
+                $ref: "#/components/schemas/Person"
+        "404":
           description: Person with the give ID was not found
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
-        '500':
+                $ref: "#/components/schemas/Error"
+        "500":
           description: Internal server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: "#/components/schemas/Error"
 components:
   schemas:
     AdverseEvent:
@@ -101,11 +101,11 @@ components:
         - description
       properties:
         patient:
-            type: string
+          type: string
         date:
-            type: string
-        description: 
-            type: string
+          type: string
+        description:
+          type: string
     Patient:
       type: object
       required:
@@ -118,24 +118,24 @@ components:
         - vaccine
         - active
       properties:
-        name: 
-            type: string
-        appointment: 
-            type: string
-        personalId: 
-            type: string
-        dob: 
-            type: string
-        phone: 
-            type: string
-        email: 
-            type: string
-        vaccine: 
-            type: string
-        vaccinations: 
-            type: string
-        active: 
-            type: boolean
+        name:
+          type: string
+        appointment:
+          type: string
+        personalId:
+          type: string
+        dob:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+        vaccine:
+          type: string
+        vaccinations:
+          type: string
+        active:
+          type: boolean
     Place:
       type: object
       required:
@@ -144,42 +144,58 @@ components:
         - building
       properties:
         hospital:
-            type: string
+          type: string
         address:
-            type: string
+          type: string
         building:
-            type: string
+          type: string
     Vaccination:
       type: object
       required:
-          - patient
-          - vaccine
-          - date
-          - dose
-          - injectionSite
-          - injectionType
-          - adverseEvent
-          - eeszt
-          - place
+        - patient
+        - vaccine
+        - date
+        - dose
+        - injectionSite
+        - injectionType
+        - adverseEvent
+        - eeszt
+        - place
       properties:
-            patient:
-              type: string
-            vaccine:
-              type: string
-            date:
-              type: string
-            dose:
-              type: number
-            injectionSite:
-              type: string
-            injectionType: 
-              type: string
-            adverseEvent:
-              type: string
-            eeszt:
-              type: boolean
-            place: 
-              type: string
+        patient:
+          type: string
+        vaccine:
+          type: string
+        date:
+          type: string
+        dose:
+          type: number
+        injectionSite:
+          type: string
+        injectionType:
+          type: string
+        adverseEvent:
+          type: string
+        eeszt:
+          type: boolean
+        place:
+          type: string
+    Vaccine:
+      type: object
+      required:
+        - manufacture
+        - product
+        - lot
+        - doseInterval
+      properties:
+        manufacture:
+          type: string
+        product:
+          type: string
+        lot:
+          type: string
+        doseInterval:
+          type: number
     Person:
       type: object
       required:

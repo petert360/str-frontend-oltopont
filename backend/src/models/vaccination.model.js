@@ -42,7 +42,6 @@ const VaccinationSchema = mongoose.Schema(
             ref: 'Place',
             required: true,
         },
-        // comment: String,
     },
     {
         timestamps: true,
