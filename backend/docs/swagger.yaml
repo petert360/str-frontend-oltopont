@@ -1,14 +1,19 @@
 openapi: 3.0.0
+
 info:
   version: 1.0.0
   title: Fullstack Vizsgaremek - Oltópont API
   description: API for the FullStack Vizsgaremek
+
 servers:
   - url: http://localhost:3000
+
 paths:
   /patient:
     get:
       description: Returns a list of patients
+      tags:
+        - patient
       responses:
         "200":
           description: List of patients returned successfully
@@ -26,6 +31,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new patient
+      tags:
+        - patient
       requestBody:
         required: true
         content:
@@ -53,7 +60,9 @@ paths:
                 $ref: "#/components/schemas/Error"
   /patient/{_id}:
     get:
-      description: Get a Patient
+      description: Get a patient
+      tags:
+        - patient
       parameters:
         - in: path
           name: _id
@@ -62,7 +71,7 @@ paths:
             type: string
       responses:
         '200':
-          description: Returns a Patient
+          description: Returns a patient
           content:
             application/json:
               schema:
@@ -81,7 +90,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     patch:
-      description: Updates a Patient
+      description: Updates a patient
+      tags:
+        - patient
       parameters:
         - in: path
           name: _id
@@ -114,7 +125,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
     delete:
-      description: Removes a Patient
+      description: Removes a patient
+      tags:
+        - patient
       parameters:
         - in: path
           name: _id
@@ -141,6 +154,593 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+
+  /adverse-event:
+    get:
+      description: Returns a list of adverse-events
+      tags:
+        - adverse-event
+      responses:
+        "200":
+          description: List of adverse-events returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AdverseEvent"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      description: Creates a new adverse-event
+      tags:
+        - adverse-event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdverseEvent"
+      responses:
+        "201":
+          description: Adverse-event has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AdverseEvent"
+        "400":
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /adverse-event/{_id}:
+    get:
+      description: Get an adverse-event
+      tags:
+        - adverse-event
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Returns an adverse-event
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/AdverseEvent'
+        '404':
+          description: Adverse-event based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates an adverse-event
+      tags:
+        - adverse-event
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdverseEvent'
+      responses:
+        '200':
+          description: Adverse-event has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdverseEvent'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes an adverse-event
+      tags:
+        - adverse-event
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Adverse-event has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Adverse-event based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /place:
+    get:
+      description: Returns a list of places
+      tags:
+        - place
+      responses:
+        "200":
+          description: List of places returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Place"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      description: Creates a new place
+      tags:
+        - place
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Place"
+      responses:
+        "201":
+          description: Place has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Place"
+        "400":
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /place/{_id}:
+    get:
+      description: Get a place
+      tags:
+        - place
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Returns a place
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/Place'
+        '404':
+          description: Place based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a place
+      tags:
+        - place
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Place'
+      responses:
+        '200':
+          description: Place has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Place'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a place
+      tags:
+        - place
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Place has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Place based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /vaccination:
+    get:
+      description: Returns a list of vaccinations
+      tags:
+        - vaccination
+      responses:
+        "200":
+          description: List of vaccinations returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Vaccination"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      description: Creates a new vaccination
+      tags:
+        - vaccination
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Vaccination"
+      responses:
+        "201":
+          description: Vaccination has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vaccination"
+        "400":
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /vaccination/{_id}:
+    get:
+      description: Get a vaccination
+      tags:
+        - vaccination
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Returns a vaccination
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/Vaccination'
+        '404':
+          description: Vaccination based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a vaccination
+      tags:
+        - vaccination
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vaccination'
+      responses:
+        '200':
+          description: Vaccination has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vaccination'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a vaccination
+      tags:
+        - vaccination
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Vaccination has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Vaccination based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /vaccine:
+    get:
+      description: Returns a list of vaccines
+      tags:
+        - vaccine
+      responses:
+        "200":
+          description: List of vaccines returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Vaccine"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      description: Creates a new vaccine
+      tags:
+        - vaccine
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Vaccine"
+      responses:
+        "201":
+          description: Vaccine has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vaccine"
+        "400":
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /vaccine/{_id}:
+    get:
+      description: Get a vaccine
+      tags:
+        - vaccine
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Returns a vaccine
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/Vaccine'
+        '404':
+          description: Vaccine based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a vaccine
+      tags:
+        - vaccine
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vaccine'
+      responses:
+        '200':
+          description: Vaccine has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vaccine'
+        '400':
+          description: Invalid request when the post data is invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a vaccine
+      tags:
+        - vaccine
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Vaccine has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Vaccine based on id doesn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+
+
   /person:
     get:
       description: Returns a list of persons
@@ -214,6 +814,10 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+
+
+
+
 components:
   schemas:
     AdverseEvent:
