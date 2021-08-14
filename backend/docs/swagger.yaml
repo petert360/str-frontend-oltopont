@@ -93,11 +93,6 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    Place:
-      type: object
-      properties:
-        property:
-          type: integer
     AdverseEvent:
       type: object
       required:
@@ -141,6 +136,50 @@ components:
             type: string
         active: 
             type: boolean
+    Place:
+      type: object
+      required:
+        - hospital
+        - address
+        - building
+      properties:
+        hospital:
+            type: string
+        address:
+            type: string
+        building:
+            type: string
+    Vaccination:
+      type: object
+      required:
+          - patient
+          - vaccine
+          - date
+          - dose
+          - injectionSite
+          - injectionType
+          - adverseEvent
+          - eeszt
+          - place
+      properties:
+            patient:
+              type: string
+            vaccine:
+              type: string
+            date:
+              type: string
+            dose:
+              type: number
+            injectionSite:
+              type: string
+            injectionType: 
+              type: string
+            adverseEvent:
+              type: string
+            eeszt:
+              type: boolean
+            place: 
+              type: string
     Person:
       type: object
       required:

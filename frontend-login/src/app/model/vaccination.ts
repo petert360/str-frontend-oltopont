@@ -14,5 +14,4 @@ export class Vaccination {
     adverseEvent: AdverseEvent = new AdverseEvent;
     eeszt: boolean = false; // EESZT documentation
     place: Place = new Place;
-    // comment:  string = ''
 }
