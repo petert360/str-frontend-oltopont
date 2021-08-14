@@ -93,7 +93,7 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    Patient:
+    Place:
       type: object
       properties:
         property:
@@ -111,7 +111,7 @@ components:
             type: string
         description: 
             type: string
-    Person:
+    Patient:
       type: object
       required:
         - name
@@ -141,6 +141,19 @@ components:
             type: string
         active: 
             type: boolean
+    Person:
+      type: object
+      required:
+        - first_name
+        - last_name
+        - email
+      properties:
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
     Error:
       type: object
       required:
