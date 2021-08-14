@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-6 offset-3 mt-3">
+        <form #vaccinationForm="ngForm" (ngSubmit)="onSave()">
+            <div class="form-group">
+                <label for="">Páciens</label>
+                <input class="form-control" type="text" name="patient" [(ngModel)]="vaccination.patient">
+                <label for="">Vakcina</label>
+                <input class="form-control" type="text" name="vaccine" [(ngModel)]="vaccination.vaccine">
+                <label for="">Dátum</label>
+                <input class="form-control" type="date" name="date" [(ngModel)]="vaccination.date">
+                <label for="">Vakcina adagja</label>
+                <input class="form-control" type="number" name="dose" [(ngModel)]="vaccination.dose">
+                <label for="">Beadás helye</label>
+                <input class="form-control" type="text" name="injectionSite" [(ngModel)]="vaccination.injectionSite">
+                <label for="">Beadás módja</label>
+                <input class="form-control" type="text" name="injectionType" [(ngModel)]="vaccination.injectionType">
+                <label for="">Oltási szövődmény</label>
+                <input class="form-control" type="text" name="adverseEvent" [(ngModel)]="vaccination.adverseEvent">
+                <label for="">EESZT</label>
+                <input class="form-control" type="text" name="eeszt" [(ngModel)]="vaccination.eeszt">
+                <label for="">Helyszín</label>
+                <input class="form-control" type="text" name="place" [(ngModel)]="vaccination.place">
+            </div>
+            <button [disabled]="vaccinationForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
+                <i class="fas fa-save"></i>
+                Oltási esemény mentése
+            </button>
+        </form>
+    </div>
+</div>
