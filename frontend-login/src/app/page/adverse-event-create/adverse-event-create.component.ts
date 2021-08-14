@@ -22,7 +22,7 @@ export class AdverseEventCreateComponent implements OnInit {
 
   onSave(): void {
     this.aeService.create(this.ae).subscribe(
-      car => this.router.navigate(['/', 'adverse-events']),
+      () => this.router.navigate(['/', 'adverse-events']),
       err => console.error(err)
     );
   }

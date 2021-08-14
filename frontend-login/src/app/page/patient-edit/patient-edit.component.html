@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-6 offset-3 mt-3">
-        <form #aeForm="ngForm" (ngSubmit)="onSave()">
+        <form #patientForm="ngForm" (ngSubmit)="onSave()">
             <div class="form-group">
                 <label for="">Időpont</label>
                 <input class="form-control" type="date" name="appointment" [(ngModel)]="patient.appointment">
@@ -19,7 +19,7 @@
                 <label for="">Oltások</label>
                 <input class="form-control" type="text" name="vaccinations" [(ngModel)]="patient.vaccinations">
             </div>
-            <button [disabled]="aeForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
+            <button [disabled]="patientForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
                 <i class="fas fa-save"></i>
                 Páciens mentése
             </button>

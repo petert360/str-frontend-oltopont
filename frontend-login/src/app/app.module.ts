@@ -22,6 +22,8 @@ import { AdverseEventEditComponent } from './page/adverse-event-edit/adverse-eve
 import { AdverseEventCreateComponent } from './page/adverse-event-create/adverse-event-create.component';
 import { PatientCreateComponent } from './page/patient-create/patient-create.component';
 import { PatientEditComponent } from './page/patient-edit/patient-edit.component';
+import { PlaceCreateComponent } from './page/place-create/place-create.component';
+import { PlaceEditComponent } from './page/place-edit/place-edit.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { PatientEditComponent } from './page/patient-edit/patient-edit.component
     AdverseEventEditComponent,
     AdverseEventCreateComponent,
     PatientCreateComponent,
-    PatientEditComponent
+    PatientEditComponent,
+    PlaceCreateComponent,
+    PlaceEditComponent
   ],
   imports: [
     BrowserModule,

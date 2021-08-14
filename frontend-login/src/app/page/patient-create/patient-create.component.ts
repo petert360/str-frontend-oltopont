@@ -21,7 +21,7 @@ export class PatientCreateComponent implements OnInit {
 
   onSave(): void {
     this.patientService.create(this.patient).subscribe(
-      car => this.router.navigate(['/', 'patients']),
+      () => this.router.navigate(['/', 'patients']),
       err => console.error(err)
     );
   }
