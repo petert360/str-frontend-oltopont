@@ -29,7 +29,7 @@ const PatientSchema = mongoose.Schema(
         vaccine: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Vaccine',
-            //required: true,
+            required: true,
         },
         vaccinations: {
             type: [mongoose.Schema.Types.ObjectId],

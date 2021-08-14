@@ -11,7 +11,6 @@ export class Patient {
     email: string = '';
     vaccine: Vaccine = new Vaccine;
     // riskGroup: string = '';
-    vaccinations: Vaccination[] = []; 
+    vaccinations?: Vaccination[] = []; 
     active: boolean = true;
-    done?: boolean = false;
 }
