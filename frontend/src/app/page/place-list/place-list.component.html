@@ -25,6 +25,10 @@
                         <button [routerLink]="['/', 'place', 'edit', place._id]" class="btn btn-primary">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
+                        <button (click)="onDelete(place)" type="button" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+
                     </div>
                 </td>
             </tr>

@@ -19,4 +19,15 @@ export class PlaceListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(place: Place): void {
+    if (confirm("A törlés megerősítéséhez nyomja meg az OK gombot")) {
+      this.placeService.remove(place._id as string).subscribe(
+        () => this.list$ = this.placeService.getAll()
+      )
+    } else {
+      console.log('Delete operation cancelled')
+    }
+  }
+
+
 }

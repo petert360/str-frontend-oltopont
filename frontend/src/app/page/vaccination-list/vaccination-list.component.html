@@ -36,6 +36,10 @@
                         <button [routerLink]="['/', 'vaccination', 'edit', vaccination._id]" class="btn btn-primary">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
+                        <button (click)="onDelete(vaccination)" type="button" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+
                     </div>
                 </td>
             </tr>

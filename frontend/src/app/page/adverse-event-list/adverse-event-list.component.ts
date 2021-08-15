@@ -19,4 +19,15 @@ export class AdverseEventListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(ae: AdverseEvent): void {
+    if (confirm("A törlés megerősítéséhez nyomja meg az OK gombot")) {
+      this.adverseEventService.remove(ae._id as string).subscribe(
+        () => this.list$ = this.adverseEventService.getAll()
+      )
+    } else {
+      console.log('Delete operation cancelled')
+    }
+  }
+
+
 }

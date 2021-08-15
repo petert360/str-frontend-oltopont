@@ -24,6 +24,10 @@
                         <button [routerLink]="['/', 'adverse-event', 'edit', ae._id]" class="btn btn-primary">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
+                        <button (click)="onDelete(ae)" type="button" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+
                     </div>
                 </td>
             </tr>

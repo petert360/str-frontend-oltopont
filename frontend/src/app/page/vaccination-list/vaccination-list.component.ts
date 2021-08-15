@@ -22,4 +22,15 @@ export class VaccinationListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(vaccination: Vaccination): void {
+    if (confirm("A törlés megerősítéséhez nyomja meg az OK gombot")) {
+      this.vaccinationService.remove(vaccination._id as string).subscribe(
+        () => this.list$ = this.vaccinationService.getAll()
+      )
+    } else {
+      console.log('Delete operation cancelled')
+    }
+  }
+
+
 }
