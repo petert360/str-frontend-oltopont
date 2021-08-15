@@ -32,7 +32,10 @@ const VaccinationSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        adverseEvent: String,
+        adverseEvent:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'AdverseEvent'
+        },
         eeszt: {
             type: Boolean,
             required: true,

@@ -1,42 +1,33 @@
-<div class="container p-3">
-    <div class="row">
-        <h1>Helyszínek</h1>
+<div class="container pt-3">
 
-        
-            <div class="col-12 d-grid mt-3 mb-3">
-                <button routerLink="/place/create" class="btn btn-success w-100">
-                    Új helyszín rögzítése
-                </button>
-            </div>
-        </div>
+    <h1>Helyszínek</h1>
 
-        <div class="row">
-            <div class="col-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Kórház</th>
-                            <th>Cím</th>
-                            <th>Épület</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let place of list$ | async">
-                            <td>{{ place.hospital }}</td>
-                            <td>{{ place.address }}</td>
-                            <td>{{ place.building }}</td>
-                            <td>
-                                <div class="btn-group">
-                                    <button [routerLink]="['/', 'place', 'edit', place._id]" class="btn btn-info">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    
+    <button routerLink="/place/create" class="btn btn-success w-100">
+        Új helyszín rögzítése
+    </button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Kórház</th>
+                <th>Cím</th>
+                <th>Épület</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let place of list$ | async">
+                <td>{{ place.hospital }}</td>
+                <td>{{ place.address }}</td>
+                <td>{{ place.building }}</td>
+                <td>
+                    <div class="btn-group">
+                        <button [routerLink]="['/', 'place', 'edit', place._id]" class="btn btn-info">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

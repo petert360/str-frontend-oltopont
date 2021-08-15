@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Vaccination } from 'src/app/model/vaccination';
 import { VaccinationService } from 'src/app/service/vaccination.service';
 
@@ -10,7 +11,8 @@ import { VaccinationService } from 'src/app/service/vaccination.service';
 })
 export class VaccinationListComponent implements OnInit {
 
-  list$: Observable<Vaccination[]> = this.vaccinationService.getAll();
+  list$: Observable<Vaccination[]> = this.vaccinationService.getAll().pipe(
+    tap( res => console.log(res)));
 
   constructor(
     private vaccinationService: VaccinationService,
