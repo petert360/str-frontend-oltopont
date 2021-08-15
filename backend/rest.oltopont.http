@@ -24,11 +24,13 @@ Content-Type: application/json
 
 {
   "name": "Feliza Philippa",
+  "appointment": "9/13/2000",
   "personalId": "2604976561",
   "dob": "9/13/2000",
   "phone": "306-444-6065",
   "email": "fphilippault0@theguardians.com",
 	"vaccine": "6112f228de213f25e65a78e0",
+  "vaccination": "6112f228de213f25e65a78aa",
   "active": true
 }
 
