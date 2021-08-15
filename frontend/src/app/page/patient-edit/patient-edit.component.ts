@@ -42,5 +42,5 @@ export class PatientEditComponent implements OnInit {
       err => console.error(err)
     );
   }
-
+ 
 }

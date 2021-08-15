@@ -24,9 +24,13 @@ export class PatientListComponent implements OnInit {
   }
 
   onDelete(patient: Patient): void {
-    this.patientService.remove(patient._id as string).subscribe(
-      () => this.list$ = this.patientService.getAll()
-    )
+    if (confirm("A törlés megerősítéséhez nyomja meg az OK gombot")) {
+      this.patientService.remove(patient._id as string).subscribe(
+        () => this.list$ = this.patientService.getAll()
+      )
+    } else {
+      console.log('Delete operation cancelled')
+    }
   }
 
 }
