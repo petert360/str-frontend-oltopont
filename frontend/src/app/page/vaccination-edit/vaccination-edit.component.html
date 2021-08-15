@@ -1,26 +1,48 @@
 <div class="row">
     <div class="col-6 offset-3 mt-3">
-        <form #vaccinationForm="ngForm" (ngSubmit)="onSave()">
+        <form #vaccinationForm="ngForm" (ngSubmit)="onSave(vaccinationForm)">
             <div class="form-group">
-                <label for="">Páciens</label>
-                <input class="form-control" type="text" name="patient" [(ngModel)]="vaccination.patient">
-                <label for="">Vakcina</label>
-                <input class="form-control" type="text" name="vaccine" [(ngModel)]="vaccination.vaccine">
-                <label for="">Dátum</label>
-                <input class="form-control" type="date" name="date" [(ngModel)]="vaccination.date">
-                <label for="">Vakcina adagja</label>
-                <input class="form-control" type="number" name="dose" [(ngModel)]="vaccination.dose">
-                <label for="">Beadás helye</label>
-                <input class="form-control" type="text" name="injectionSite" [(ngModel)]="vaccination.injectionSite">
-                <label for="">Beadás módja</label>
-                <input class="form-control" type="text" name="injectionType" [(ngModel)]="vaccination.injectionType">
-                <label for="">Oltási szövődmény</label>
-                <input class="form-control" type="text" name="adverseEvent" [(ngModel)]="vaccination.adverseEvent">
-                <label for="">EESZT</label>
-                <input class="form-control" type="text" name="eeszt" [(ngModel)]="vaccination.eeszt">
-                <label for="">Helyszín</label>
-                <input class="form-control" type="text" name="place" [(ngModel)]="vaccination.place">
+                <label for="" class="mb-0">Páciens</label>
+                <input class="form-control" type="text" name="patient" [(ngModel)]="vaccination.patient.name">
             </div>
+            <div class="form-group">
+                <label class="mb-0" for="vaccineSelect">Vakcina</label>
+                <select class="form-control" [ngModel]="vaccination.vaccine._id" name="vaccineSelect" required>
+                    <option *ngFor="let vaccine of vaccineList$ | async" [value]="vaccine._id">
+                        {{vaccine.product}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Dátum</label>
+                <input class="form-control" type="text" name="date" [(ngModel)]="vaccination.date">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Vakcina adagja</label>
+                <input class="form-control" type="number" name="dose" [(ngModel)]="vaccination.dose">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Beadás helye</label>
+                <input class="form-control" type="text" name="injectionSite" [(ngModel)]="vaccination.injectionSite">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Beadás módja</label>
+                <input class="form-control" type="text" name="injectionType" [(ngModel)]="vaccination.injectionType">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Oltási szövődmény</label>
+                <input class="form-control" type="text" name="adverseEvent"
+                    [(ngModel)]="vaccination.adverseEvent.description">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">EESZT</label>
+                <input class="form-control" type="text" name="eeszt" [(ngModel)]="vaccination.eeszt">
+            </div>
+            <div class="form-group">
+                <label for="" class="mb-0">Helyszín</label>
+                <input class="form-control" type="text" name="place" [(ngModel)]="vaccination.place.hospital">
+            </div>
+
             <button [disabled]="vaccinationForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
                 <i class="fas fa-save"></i>
                 Oltási esemény mentése
