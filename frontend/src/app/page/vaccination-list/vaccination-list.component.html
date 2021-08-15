@@ -1,7 +1,7 @@
 <div class="container pt-3">
     <h1>Oltási események</h1>
 
-    <button routerLink="/vaccination/create" class="btn btn-block btn-success my-3">
+    <button routerLink="/vaccination/create" class="btn btn-block btn-primary my-3">
         Új oltási esemény rögzítése
     </button>
 
@@ -33,7 +33,7 @@
                 <td>{{ vaccination.place.hospital }}</td>
                 <td>
                     <div class="btn-group">
-                        <button [routerLink]="['/', 'vaccination', 'edit', vaccination._id]" class="btn btn-info">
+                        <button [routerLink]="['/', 'vaccination', 'edit', vaccination._id]" class="btn btn-primary">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
                     </div>

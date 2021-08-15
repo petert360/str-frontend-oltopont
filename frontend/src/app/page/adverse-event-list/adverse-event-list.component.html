@@ -1,7 +1,7 @@
 <div class="container pt-3">
     <h1>Oltási szövődmények</h1>
 
-    <button routerLink="/adverse-event/create" class="btn btn-block btn-success my-3">
+    <button routerLink="/adverse-event/create" class="btn btn-block btn-primary my-3">
         Új oltási szövődmény rögzítése
     </button>
 
@@ -21,7 +21,7 @@
                 <td>{{ ae.description }}</td>
                 <td>
                     <div class="btn-group">
-                        <button [routerLink]="['/', 'adverse-event', 'edit', ae._id]" class="btn btn-info">
+                        <button [routerLink]="['/', 'adverse-event', 'edit', ae._id]" class="btn btn-primary">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
                     </div>

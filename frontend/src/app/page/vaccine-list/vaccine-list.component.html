@@ -1,7 +1,7 @@
 <div class="container pt-3">
     <h1>Vakcinák</h1>
 
-    <button routerLink="/vaccine/create" class="btn btn-success w-100">
+    <button routerLink="/vaccine/create" class="btn btn-primary w-100">
         Új vakcina rögzítése
     </button>
 
@@ -23,8 +23,8 @@
                 <td>{{ vaccine.doseInterval }}</td>
                 <td>
                     <div class="btn-group">
-                        <button [routerLink]="['/', 'vaccine', 'edit', vaccine._id]" class="btn btn-info">
-                            <i class="fas fa-pencil-alt"></i>
+                        <button [routerLink]="['/', 'vaccine', 'edit', vaccine._id]" class="btn btn-primary">
+                            <i class="fa fa-pencil-alt"></i>
                         </button>
                     </div>
                 </td>
