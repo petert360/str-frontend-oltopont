@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Vaccine } from 'src/app/model/vaccine';
 import { VaccineService } from 'src/app/service/vaccine.service';
@@ -19,9 +20,10 @@ export class VaccineCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSave(): void {
-    this.vaccineService.create(this.vaccine).subscribe(
-      () => this.router.navigate(['/', 'vacciness']),
+  onSave(ngForm: NgForm): void {
+    const {_id, ...data } = this.vaccine;
+    this.vaccineService.create(data).subscribe(
+      () => this.router.navigate(['/', 'vaccines']),
       err => console.error(err)
     );
   }

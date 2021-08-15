@@ -1,5 +1,5 @@
 export class Vaccine {
-    _id: string = '';
+    _id?: string = '';
     manufacture: string = '';
     product: string = '';
     lot: string = '';
