@@ -21,7 +21,8 @@ export class AdverseEventCreateComponent implements OnInit {
   }
 
   onSave(): void {
-    this.aeService.create(this.ae).subscribe(
+    const {_id, ...data } = this.ae;
+    this.aeService.create(data).subscribe(
       () => this.router.navigate(['/', 'adverse-events']),
       err => console.error(err)
     );
