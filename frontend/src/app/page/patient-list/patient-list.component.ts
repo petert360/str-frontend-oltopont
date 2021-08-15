@@ -11,8 +11,9 @@ import { PatientService } from 'src/app/service/patient.service';
 })
 export class PatientListComponent implements OnInit {
 
+  patient: Patient = new Patient();
   list$: Observable<Patient[]> = this.patientService.getAll().pipe(
-    tap( res => console.log(res)))
+    tap(res => console.log(res)))
 
   constructor(
     private patientService: PatientService,
@@ -20,6 +21,12 @@ export class PatientListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.list$)
+  }
+
+  onDelete(patient: Patient): void {
+    this.patientService.remove(patient._id as string).subscribe(
+      () => this.list$ = this.patientService.getAll()
+    )
   }
 
 }
