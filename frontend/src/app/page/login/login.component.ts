@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.auth.login(ngForm.value).toPromise().then(
       userResponse => {
         if (this.auth.currentUserValue) {
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/']);
         }
       },
       err => {
