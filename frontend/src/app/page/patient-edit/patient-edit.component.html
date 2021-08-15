@@ -1,23 +1,37 @@
 <div class="row">
     <div class="col-6 offset-3 mt-3">
-        <form #patientForm="ngForm" (ngSubmit)="onSave()">
+        <form #patientForm="ngForm" (ngSubmit)="onSave(patientForm)">
             <div class="form-group">
-                <label for="">Időpont</label>
+                <label class="mb-0" for="">Időpont</label>
                 <input class="form-control" type="text" name="appointment" [(ngModel)]="patient.appointment">
-                <label for="">Név</label>
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="">Név</label>
                 <input class="form-control" type="text" name="name" [(ngModel)]="patient.name">
-                <label for="">TAJ vagy egyéb személy azonosító</label>
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="">TAJ vagy egyéb személy azonosító</label>
                 <input class="form-control" type="text" name="personalId" [(ngModel)]="patient.personalId">
-                <label for="">Születési dátum</label>
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="">Születési dátum</label>
                 <input class="form-control" type="text" name="dob" [(ngModel)]="patient.dob">
-                <label for="">Telefon</label>
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="">Telefon</label>
                 <input class="form-control" type="text" name="phone" [(ngModel)]="patient.phone">
-                <label for="">email</label>
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="">email</label>
                 <input class="form-control" type="text" name="email" [(ngModel)]="patient.email">
-                <label for="">Vakcina</label>
-                <input class="form-control" type="text" name="vaccine" [(ngModel)]="patient.vaccine._id">
-                <label for="">Oltások</label>
-                <input class="form-control" type="text" name="vaccinations" [(ngModel)]="patient.vaccinations">
+            </div>
+            <div class="form-group">
+                <label class="mb-0" for="vaccineSelect">Vakcina</label>
+                <select class="form-control" [ngModel]="patient.vaccine._id" name="vaccineSelect" required>
+                    <option *ngFor="let vaccine of vaccineList$ | async" [value]="vaccine._id">
+                        {{vaccine.product}}
+                    </option>
+                </select>
             </div>
             <button [disabled]="patientForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">
                 <i class="fas fa-save"></i>

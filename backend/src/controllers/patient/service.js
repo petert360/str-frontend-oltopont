@@ -6,9 +6,9 @@ exports.create = requestData => {
 };
 // A populate-et ki kell egészíteni, ha külső hivatkozás van
 // pl.: exports.findAll = () => Order.find().populate('user', 'products');
-exports.findAll = () => Model.find().populate('vaccine', 'vaccinations');
+exports.findAll = () => Model.find().populate('vaccine').populate('vaccinations');
 
-exports.findOne = id => Model.findById(id).populate('vaccine', 'vaccinations');
+exports.findOne = id => Model.findById(id).populate('vaccine').populate('vaccinations');
 
 exports.update = (id, updateData) =>
     Model.findByIdAndUpdate(id, updateData, { new: true });

@@ -28,7 +28,6 @@ export class PatientCreateComponent implements OnInit {
   onSave(ngForm: NgForm): void {
     //console.log(ngForm.value.vaccineSelect)
     const {_id, vaccinations, ...data } = this.patient;
-    
     data.vaccine = ngForm.value.vaccineSelect
     this.patientService.create(data).subscribe(
       () => this.router.navigate(['/', 'patients']),

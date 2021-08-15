@@ -1,45 +1,38 @@
-<div class="container p-3">
-    <div class="row">
-        <app-sidebar></app-sidebar>
-        <h1>Páciensek</h1>
+<div class="container">
+<h1>Páciensek</h1>
+<button routerLink="/patient/create" class="btn btn-block btn-success">
+    Új páciens rögzítése
+</button>
 
-        
-            <div class="col-12 d-grid mt-3 mb-3">
-                <button routerLink="/patient/create" class="btn btn-success w-100">
-                    Új páciens rögzítése
-                </button>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Idő</th>
-                            <th>Név</th>
-                            <th>TAJ</th>
-                            <th>Vakcina</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let patient of list$ | async">                            
-                            <td>{{ patient.appointment }}</td>
-                            <td>{{ patient.name }}</td>
-                            <td>{{ patient.personalId }}</td>
-                            <td>{{ patient.vaccine }}</td>
-                            <td>
-                                <div class="btn-group">
-                                    <button [routerLink]="['/', 'patient', 'edit', patient._id]" class="btn btn-info">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Idő</th>
+            <th>Név</th>
+            <th>TAJ</th>
+            <th>Vakcina</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of list$ | async">
+            <td>{{ patient.appointment }}</td>
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.personalId }}</td>
+            <td>{{ patient.vaccine.product }}</td>
+            <td>
+                <div class="btn-group">
+                    <button [routerLink]="['/', 'patient', 'edit', patient._id]" class="btn btn-info">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 </div>
