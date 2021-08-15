@@ -1,0 +1,37 @@
+[
+    {
+        "_id": { "$oid": "6118ace6fc13ae3522000001" },
+        "manufacture": "Moderna",
+        "product": "Moderna vaccine",
+        "lot": "AF518351",
+        "doseInterval": 28
+    },
+    {
+        "_id": { "$oid": "6118ace6fc13ae3522000002" },
+        "manufacture": "Pfizer",
+        "product": "Comirnaty",
+        "lot": "ME057390",
+        "doseInterval": 21
+    },
+    {
+        "_id": { "$oid": "6118ace6fc13ae3522000003" },
+        "manufacture": "Janssen",
+        "product": "Janssen COVID-19 vacccine",
+        "lot": "VZ291247",
+        "doseInterval": 0
+    },
+    {
+        "_id": { "$oid": "6118ace6fc13ae3522000004" },
+        "manufacture": "Gamaleya Research Institute",
+        "product": "Sputnik V",
+        "lot": "YV943259",
+        "doseInterval": 42
+    },
+    {
+        "_id": { "$oid": "6118ace6fc13ae3522000005" },
+        "manufacture": "Sinopharm",
+        "product": "BBIBP-CorV",
+        "lot": "FK975345",
+        "doseInterval": 28
+    }
+]

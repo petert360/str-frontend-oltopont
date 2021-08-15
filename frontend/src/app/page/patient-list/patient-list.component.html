@@ -24,8 +24,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let patient of list$ | async">
-                            <td>{{ patient._id }}</td>
+                        <tr *ngFor="let patient of list$ | async">                            
                             <td>{{ patient.appointment }}</td>
                             <td>{{ patient.name }}</td>
                             <td>{{ patient.personalId }}</td>
