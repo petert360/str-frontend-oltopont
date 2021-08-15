@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-6 offset-3 mt-3">
-        <form #placeForm="ngForm" (ngSubmit)="onSave()">
+        <form #placeForm="ngForm" (ngSubmit)="onSave(placeForm)">
             <div class="form-group">
                 <label for="">Kórház</label>
                 <input class="form-control" type="text" name="hospital" [(ngModel)]="place.hospital">
-                <label for="">Dátum</label>
+                <label for="">Cím</label>
                 <input class="form-control" type="text" name="address" [(ngModel)]="place.address">
-                <label for="">Leírás</label>
+                <label for="">Épület</label>
                 <input class="form-control" type="text" name="building" [(ngModel)]="place.building">
             </div>
             <button [disabled]="placeForm.invalid" type="submit" class="btn btn-primary w-100 mt-3 mb-3">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Place } from 'src/app/model/place';
 import { PlaceService } from 'src/app/service/place.service';
@@ -19,8 +20,10 @@ export class PlaceCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSave(): void {
-    this.placeService.create(this.place).subscribe(
+  onSave(ngForm: NgForm): void {
+    //delete this.place['_id'];
+    const {_id, ...data } = this.place;
+    this.placeService.create(data).subscribe(
       () => this.router.navigate(['/', 'places']),
       err => console.error(err)
     );

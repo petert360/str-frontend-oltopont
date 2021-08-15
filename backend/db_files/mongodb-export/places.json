@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "6118c1b1fc13ae3522000008"
+  },
+  "hospital": "Kórház 1",
+  "address": "Cím 1",
+  "building": 8
+},{
+  "_id": {
+    "$oid": "6118c1b1fc13ae3522000009"
+  },
+  "hospital": "Kórház 2",
+  "address": "Cím 3",
+  "building": 9
+},{
+  "_id": {
+    "$oid": "6118c1b1fc13ae352200000a"
+  },
+  "hospital": "Kórház 4",
+  "address": "Cím 6",
+  "building": "8",
+  "updatedAt": {
+    "$date": "2021-08-15T07:29:46.133Z"
+  }
+},{
+  "_id": {
+    "$oid": "6118c1b1fc13ae352200000b"
+  },
+  "hospital": "Kórház 1",
+  "address": "Cím 6",
+  "building": 2
+},{
+  "_id": {
+    "$oid": "6118c1b1fc13ae352200000c"
+  },
+  "hospital": "Kórház 3",
+  "address": "Cím 6",
+  "building": 8
+}]
