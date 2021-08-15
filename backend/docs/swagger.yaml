@@ -815,9 +815,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
 
-
-
-
 components:
   schemas:
     AdverseEvent:
@@ -946,3 +943,13 @@ components:
           type: string
         has_error:
           type: boolean
+
+  securitySchemes:
+    name:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
