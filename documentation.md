@@ -81,59 +81,11 @@ Az alkalmazásba történő belépéséhez használható e-mail cím és jelszó
 
 A `base.service.ts` állományban meg kell adni az API végpont elérési útvonalát.
 
-## Entitások
+## Entitások diagram
 
-Az alkalmazásban használt entitások részletei:
+Az alkalmazásban használt entitások entitás-kapcsolat diagramja:
 
-```javascript
-class Patient {
-    _id: string = '';
-    name: string = '';
-    appointment: Date = new Date();
-    personalId: string = '';
-    dob: Date = new Date();
-    phone: string = '';
-    email: string = '';
-    vaccine: Vaccine = new Vaccine;
-    vaccinations?: Vaccination[] = [];
-    active: boolean = true;
-}
-
-class Vaccine {
-    _id: string = '';
-    manufacture: string = '';
-    product: string = '';
-    lot: string = '';
-    doseInterval: number = 0;
-}
-
-class Vaccination {
-    _id: string = '';
-    patient: Patient = new Patient();
-    vaccine: Vaccine = new Vaccine;
-    date: Date = new Date();
-    dose: number = 0;
-    injectionSite: string = '';
-    injectionType: string = '';
-    adverseEvent: AdverseEvent = new AdverseEvent;
-    eeszt: boolean = false;
-    place: Place = new Place;
-}
-
-class Place {
-    _id: string = '';
-    hospital: string = '';
-    address: string = '';
-    building: string = '';
-}
-
-class AdverseEvent {
-    _id: string = '';
-    patient: Patient = new Patient;
-    date: Date = new Date();
-    description: string = '';
-}
-```
+![vizsgaremek-oltopont-erd](./str-fullstack-oltopont-erd.png)
 
 ## A backend végpontok dokumentációja
 
