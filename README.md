@@ -87,7 +87,7 @@ A feladat elkészült, ha:
 
 ### Felhasználói történet #5
 
-Adminisztrátorként szükségem van arra, hogy a páciens lista elemeit rendezni és szűrni lehessen, annak érdekében, hogy a táblázatben megjelenített adatok módosíthatók legyenek.
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeit rendezni és szűrni lehessen, annak érdekében, hogy a táblázatban megjelenített adatok módosíthatók legyenek.
 
 #### Elfogadási kritérium
 
@@ -98,6 +98,20 @@ A feladat elkészült, ha:
 #### Feladatok
 
 - A páciens lista elemeihez rendezés és szűrés funkció hozzárendelése.
+
+### Felhasználói történet #6
+
+Adminisztrátorként szükségem van arra, hogy a páciens lista oldalakra bontva, megadott számú pácienst listázzon, és az oldalak között lapozni lehessen, annak érdekében, hogy a táblázat átlátható legyen.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A páciens lista elemeihez lapozó funkció tartozik.
+
+#### Feladatok
+
+- A páciens lista elemeihez lapozó funkció hozzárendelése.
 
 ---
 
