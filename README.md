@@ -71,6 +71,20 @@ A feladat elkészült, ha:
 
 - A páciens lista elemeihez létrehozás funkció hozzárendelése.
 
+### Felhasználói történet #4
+
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeihez törlés funkció tartozzon, annak érdekében, hogy az adatbázisból pácienseket lehessen törölni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A páciens lista elemeihez törlés funkció tartozik.
+
+#### Feladatok
+
+- A páciens lista elemeihez törlés funkció hozzárendelése.
+
 ---
 
 ## Eposz #3 - Vakcina adatok
@@ -107,7 +121,7 @@ A feladat elkészült, ha:
 
 ### Felhasználói történet #3
 
-Adminisztrátorként szükségem van arra, hogy a páciens lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új vakcinát lehessen rögzíteni.
+Adminisztrátorként szükségem van arra, hogy a vakcina lista elemeihez létrehozás funkció tartozzon, annak érdekében, hogy az adatbázisba új vakcinát lehessen rögzíteni.
 
 #### Elfogadási kritérium
 
@@ -119,6 +133,20 @@ A feladat elkészült, ha:
 
 - A vakcina lista elemeihez adatok létrehozása funkció hozzárendelése.
 
+### Felhasználói történet #4
+
+Adminisztrátorként szükségem van arra, hogy a vakcina lista elemeihez törlés funkció tartozzon, annak érdekében, hogy az adatbázisból vakcinákat lehessen törölni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A vakcina lista elemeihez törlés funkció tartozik.
+
+#### Feladatok
+
+- A vakcina lista elemeihez törlés funkció hozzárendelése.
+
 ---
 
 ## Eposz #4 - Oltási események
@@ -127,7 +155,7 @@ Adminisztrátorként szükségem van arra, hogy az oltási események táblázat
 
 ### Felhasználói történet #1
 
-Adminisztrátorként szükségem van arra, hogy az oltási események listáj táblázatos formában megjelenjen, így az adatbázisba felvitt oltási események nyomon követhetők.
+Adminisztrátorként szükségem van arra, hogy az oltási események listája táblázatos formában megjelenjen, így az adatbázisba felvitt oltási események nyomon követhetők.
 
 #### Elfogadási kritérium
 
@@ -161,17 +189,31 @@ Adminisztrátorként szükségem van arra, hogy az oltási események lista elem
 
 A feladat elkészült, ha:
 
-- A oltási esemény lista elemeihez létrehozás funkció tartozik.
+- Az oltási esemény lista elemeihez létrehozás funkció tartozik.
 
 #### Feladatok
 
-- A oltási esemény lista elemeihez adatok létrehozása funkció hozzárendelése.
+- Az oltási esemény lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+### Felhasználói történet #4
+
+Adminisztrátorként szükségem van arra, hogy az oltási esemény lista elemeihez törlés funkció tartozzon, annak érdekében, hogy az adatbázisból oltási eseményeket lehessen törölni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási esemény lista elemeihez törlés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási esemény lista elemeihez törlés funkció hozzárendelése.
 
 ---
 
 ## Eposz #5 - Helyszínek
 
-Adminisztrátorként szükségem van arra, hogy az oltás beadásának helyszínei táblázatos formában megjelenjenek, hogy oltópont adatbázis átlátható legyen.
+Adminisztrátorként szükségem van arra, hogy az oltás beadásának helyszínei táblázatos formában megjelenjenek, hogy oltópont helyszín adatbázis átlátható legyen.
 
 ### Felhasználói történet #1
 
@@ -209,11 +251,25 @@ Adminisztrátorként szükségem van arra, hogy az oltási helyszín lista eleme
 
 A feladat elkészült, ha:
 
-- A oltási helyszín lista elemeihez létrehozás funkció tartozik.
+- Az oltási helyszín lista elemeihez létrehozás funkció tartozik.
 
 #### Feladatok
 
-- A oltási helyszín lista elemeihez adatok létrehozása funkció hozzárendelése.
+- Az oltási helyszín lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+### Felhasználói történet #4
+
+Adminisztrátorként szükségem van arra, hogy az oltási helyszín lista elemeihez törlés funkció tartozzon, annak érdekében, hogy az adatbázisból oltási helyszíneket lehessen törölni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási helyszín lista elemeihez törlés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási helyszín lista elemeihez törlés funkció hozzárendelése.
 
 ---
 
@@ -257,14 +313,28 @@ Adminisztrátorként szükségem van arra, hogy az oltási szövődmények lista
 
 A feladat elkészült, ha:
 
-- A oltási szövődmény lista elemeihez létrehozás funkció tartozik.
+- Az oltási szövődmény lista elemeihez létrehozás funkció tartozik.
 
 #### Feladatok
 
-- A oltási szövődmény lista elemeihez adatok létrehozása funkció hozzárendelése.
+- Az oltási szövődmény lista elemeihez adatok létrehozása funkció hozzárendelése.
+
+
+### Felhasználói történet #4
+
+Adminisztrátorként szükségem van arra, hogy az oltási szövődmény lista elemeihez törlés funkció tartozzon, annak érdekében, hogy az adatbázisból oltási szövődményeket lehessen törölni.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- Az oltási szövődmény lista elemeihez törlés funkció tartozik.
+
+#### Feladatok
+
+- Az oltási szövődmény lista elemeihez törlés funkció hozzárendelése.
 
 ---
-
 
 ## Fejlesztési lehetőségek
 
