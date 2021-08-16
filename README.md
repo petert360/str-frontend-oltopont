@@ -85,6 +85,20 @@ A feladat elkészült, ha:
 
 - A páciens lista elemeihez törlés funkció hozzárendelése.
 
+### Felhasználói történet #5
+
+Adminisztrátorként szükségem van arra, hogy a páciens lista elemeit rendezni és szűrni lehessen, annak érdekében, hogy a táblázatben megjelenített adatok módosíthatók legyenek.
+
+#### Elfogadási kritérium
+
+A feladat elkészült, ha:
+
+- A páciens lista elemeihez rendezés és szűrés funkció tartozik.
+
+#### Feladatok
+
+- A páciens lista elemeihez rendezés és szűrés funkció hozzárendelése.
+
 ---
 
 ## Eposz #3 - Vakcina adatok
