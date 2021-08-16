@@ -29,6 +29,7 @@ import { VaccinationCreateComponent } from './page/vaccination-create/vaccinatio
 import { VaccineCreateComponent } from './page/vaccine-create/vaccine-create.component';
 import { VaccineEditComponent } from './page/vaccine-edit/vaccine-edit.component';
 import { SorterPipe } from './pipe/sorter.pipe';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SorterPipe } from './pipe/sorter.pipe';
     VaccinationCreateComponent,
     VaccineCreateComponent,
     VaccineEditComponent,
-    SorterPipe
+    SorterPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

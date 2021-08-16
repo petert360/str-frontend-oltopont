@@ -20,6 +20,8 @@ export class PatientListComponent implements OnInit {
   cols: ITableCol[] = this.config.patientColumns;
   sortDir: number = 1;
 
+  phrase: string = "";
+
   constructor(
     private patientService: PatientService,
     private config: ConfigService,
@@ -33,6 +35,11 @@ export class PatientListComponent implements OnInit {
   onColumnSelect(key: string): void {
     this.columnKey = key;
     this.sortDir = this.sortDir * (-1);
+  }
+
+  // Keresőkifejezés változása
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
 
 
