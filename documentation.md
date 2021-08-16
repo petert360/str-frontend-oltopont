@@ -4,7 +4,7 @@
 
 Az alkalmazás egy kórházi oltópont adminisztrációs felületét valósítja meg. A felhasználó bejelentkezését követően felhasználó szerepkörétől függően lehetővé válik az oltásra váró páciensek adatainak kezelése: páciensek listájának megjelenítése, új páciens adatainak felvétele és módosítása. További feladata a vakcinák, oltási események, oltási szövődmények, és az oltás helyszínek adatainak kezelése (táblázatos megjelenítés, szerkesztés, új adat létrehozása).
 
-## Az alkalmazásban felhasznált keretrendszerek:
+## Az alkalmazásban felhasznált keretrendszerek
 
 ### Backend
 
@@ -15,38 +15,38 @@ Az alkalmazás egy kórházi oltópont adminisztrációs felületét valósítja
 - Jest
 
 ### Frontend
+
 - Angular
 - Bootstrap
 - Font Awesome
 
-
-## Az **[str-fullstack-oltopont](https://github.com/petert360/str-fullstack-oltopont)** repository helyi másolat (clone) készítése:
+## Az [str-fullstack-oltopont](https://github.com/petert360/str-fullstack-oltopont "GitHub Repository") repository helyi másolat (clone) készítése
 
 `git clone https://github.com/petert360/str-fullstack-oltopont.git`
 
 ## Az alkalmazás telepítése fejlesztői (developer) üzemmódban
 
 A backend oldal és függőségeinek telepítése:
- - A `/backend` mappában a Visual Studio Code indítása: `code .`
- - A terminal ablakban a gyökér mappában kell futtatni az `npm i` parancsot.
- - Backend indító script: `npm start` 
+
+- A `/backend` mappában a Visual Studio Code indítása: `code .`
+- A terminal ablakban a gyökér mappában kell futtatni az `npm i` parancsot.
+- Backend indító script: `npm start`
 
 A frontend oldal és függőségeinek telepítése:
- - A `/frontend` mappában a Visual Studio Code indítása: `code .`
- - A terminal ablakban a gyökér mappában kell futtatni az `npm i` parancsot.
- - Frontend indító script: `npm start`
+
+- A `/frontend` mappában a Visual Studio Code indítása: `code .`
+- A terminal ablakban a gyökér mappában kell futtatni az `npm i` parancsot.
+- Frontend indító script: `npm start`
 
 ## Az alkalmazás telepítése felhasználói (production) üzemmódban
 
- - A frontend oldal és függőségeinek telepítéséhez a terminal alkalmazásban a `/frontend` mappában a kell futtatni az `npm i` parancsot.
+- A frontend oldal és függőségeinek telepítéséhez a terminal alkalmazásban a `/frontend` mappában a kell futtatni az `npm i` parancsot.
 
- - A fontend build elkészítése: `ng build`
+- A fontend build elkészítése: `ng build`
 
- - A `/frontend/dist/frontend` mappa tartalmát át kell másolni a `/backend/public` mappába.
+- A `/frontend/dist/frontend` mappa tartalmát át kell másolni a `/backend/public` mappába.
 
 ## Az alkalmazás telepítése Docker konténer használatával
-
-  Amennyiben a backend konténerhez csatolt lokális MongoDB adatbázis szeretnénk használni.
 
  1. Docker konténer felépítése (a `/backend` mappából indítva):  
   `docker build -t vizsgaremek-oltopont:latest .`  
@@ -54,18 +54,20 @@ A frontend oldal és függőségeinek telepítése:
 
  2. Docker konténer futtatása (a `/backend` mappából indítva):  
   `docker run -p 3000:3000 vizsgaremek-oltopont`  
-  (npm script:  `docker-run`)
+  (npm script: `mpm docker-run`)
   
 ## Az alkalmazás telepítése Docker Compose segítségével
+  
+Docker konténer felépítése és futtatása: a `/backend` mappából (amennyiben a backend konténerhez csatolt lokális MongoDB adatbázis szeretnénk használni).
 
- - Docker konténer felépítése és futtatása: a `/backend` mappából:  
- `docker-compose up`
+- `docker-compose up`  
+ (npm script: `npm docker-compose-up`)
 
 ## Belépés az alkalmazásba
 
 Az alkalmazás böngészőből, a telepített számítógép 3000-es portján érhető el.
 
-Például: http://localhost:3000/
+Például: <http://localhost:3000/>
 
 Az alkalmazásba történő belépéséhez használható e-mail cím és jelszó párosok:
 
