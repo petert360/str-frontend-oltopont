@@ -8,15 +8,32 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Idő</th>
+                <th (click)="onColumnSelect(col.key)" *ngFor="let col of cols">{{ col.text }}
+                    <i *ngIf="columnKey === col.key && (
+                        col.key === 'appointment' || 
+                        col.key === 'personalId') && 
+                        sortDir === 1" class="fas fa-sort-numeric-down"></i>
+                    <i *ngIf="columnKey === col.key && (
+                            col.key === 'appointment' || 
+                            col.key === 'personalId') && 
+                        sortDir === -1" class="fas fa-sort-numeric-down-alt"></i>
+                    <i *ngIf="columnKey === col.key && (
+                        col.key === 'name' || 
+                        col.key === 'vaccine') && 
+                        sortDir === 1" class="fas fa-sort-alpha-down"></i>
+                    <i *ngIf="columnKey === col.key && (
+                        col.key === 'name' || 
+                        col.key === 'vaccine') && 
+                        sortDir === -1" class="fas fa-sort-alpha-down-alt"></i>
+                    <!-- <th>Idő</th>
                 <th>Név</th>
                 <th>TAJ</th>
-                <th>Vakcina</th>
+                <th>Vakcina</th> -->
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let patient of list$ | async">
+            <tr *ngFor="let patient of list$ | async | sorter:columnKey:sortDir">
                 <td>{{ patient.appointment }}</td>
                 <td>{{ patient.name }}</td>
                 <td>{{ patient.personalId }}</td>

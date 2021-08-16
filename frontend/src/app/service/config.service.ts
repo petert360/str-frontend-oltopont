@@ -7,7 +7,6 @@ export interface ITableCol {
   checkbox?: boolean,
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,11 +15,10 @@ export class ConfigService {
   apiUrl = 'http://localhost:3000/';
 
   patientColumns: ITableCol[] = [
-    { key: 'appointment', text: 'Időpont' },
+    { key: 'appointment', text: 'Idő' },
     { key: 'name', text: 'Név' },
-    { key: 'persinalId', text: 'Azonosító' },
+    { key: 'personalId', text: 'TAJ' },
     { key: 'vaccine', text: 'Vakcina' },
-    { key: 'done', text: 'Kész', checkbox: false },
   ]
 
 
