@@ -12,6 +12,8 @@ paths:
   /patient:
     get:
       description: Returns a list of patients
+      security:
+        - bearerAuth: []
       tags:
         - patient
       responses:
@@ -31,6 +33,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new patient
+      security:
+        - bearerAuth: []
       tags:
         - patient
       requestBody:
@@ -61,6 +65,8 @@ paths:
   /patient/{_id}:
     get:
       description: Get a patient
+      security:
+        - bearerAuth: []
       tags:
         - patient
       parameters:
@@ -91,6 +97,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a patient
+      security:
+        - bearerAuth: []
       tags:
         - patient
       parameters:
@@ -126,6 +134,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Removes a patient
+      security:
+        - bearerAuth: []      
       tags:
         - patient
       parameters:
@@ -158,6 +168,8 @@ paths:
   /adverse-event:
     get:
       description: Returns a list of adverse-events
+      security:
+        - bearerAuth: []      
       tags:
         - adverse-event
       responses:
@@ -177,6 +189,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new adverse-event
+      security:
+        - bearerAuth: []      
       tags:
         - adverse-event
       requestBody:
@@ -207,6 +221,8 @@ paths:
   /adverse-event/{_id}:
     get:
       description: Get an adverse-event
+      security:
+        - bearerAuth: []      
       tags:
         - adverse-event
       parameters:
@@ -237,6 +253,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates an adverse-event
+      security:
+        - bearerAuth: []      
       tags:
         - adverse-event
       parameters:
@@ -272,6 +290,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Removes an adverse-event
+      security:
+        - bearerAuth: []      
       tags:
         - adverse-event
       parameters:
@@ -304,6 +324,8 @@ paths:
   /place:
     get:
       description: Returns a list of places
+      security:
+        - bearerAuth: []      
       tags:
         - place
       responses:
@@ -323,6 +345,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new place
+      security:
+        - bearerAuth: []      
       tags:
         - place
       requestBody:
@@ -353,6 +377,8 @@ paths:
   /place/{_id}:
     get:
       description: Get a place
+      security:
+        - bearerAuth: []      
       tags:
         - place
       parameters:
@@ -383,6 +409,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a place
+      security:
+        - bearerAuth: []      
       tags:
         - place
       parameters:
@@ -418,6 +446,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Removes a place
+      security:
+        - bearerAuth: []      
       tags:
         - place
       parameters:
@@ -450,6 +480,8 @@ paths:
   /vaccination:
     get:
       description: Returns a list of vaccinations
+      security:
+        - bearerAuth: []      
       tags:
         - vaccination
       responses:
@@ -469,6 +501,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new vaccination
+      security:
+        - bearerAuth: []      
       tags:
         - vaccination
       requestBody:
@@ -499,6 +533,8 @@ paths:
   /vaccination/{_id}:
     get:
       description: Get a vaccination
+      security:
+        - bearerAuth: []      
       tags:
         - vaccination
       parameters:
@@ -529,6 +565,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a vaccination
+      security:
+        - bearerAuth: []      
       tags:
         - vaccination
       parameters:
@@ -564,6 +602,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Removes a vaccination
+      security:
+        - bearerAuth: []      
       tags:
         - vaccination
       parameters:
@@ -596,6 +636,8 @@ paths:
   /vaccine:
     get:
       description: Returns a list of vaccines
+      security:
+        - bearerAuth: []      
       tags:
         - vaccine
       responses:
@@ -615,6 +657,8 @@ paths:
                 $ref: "#/components/schemas/Error"
     post:
       description: Creates a new vaccine
+      security:
+        - bearerAuth: []      
       tags:
         - vaccine
       requestBody:
@@ -645,6 +689,8 @@ paths:
   /vaccine/{_id}:
     get:
       description: Get a vaccine
+      security:
+        - bearerAuth: []      
       tags:
         - vaccine
       parameters:
@@ -675,6 +721,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a vaccine
+      security:
+        - bearerAuth: []      
       tags:
         - vaccine
       parameters:
@@ -710,6 +758,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Removes a vaccine
+      security:
+        - bearerAuth: []      
       tags:
         - vaccine
       parameters:
@@ -738,8 +788,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
-
 
   /person:
     get:
@@ -945,11 +993,7 @@ components:
           type: boolean
 
   securitySchemes:
-    name:
+    bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
-
-security:
-  - bearerAuth: []
-
