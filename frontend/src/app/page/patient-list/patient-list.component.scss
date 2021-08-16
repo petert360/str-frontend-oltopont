@@ -1,0 +1,19 @@
+thead {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  th:last-child {
+    cursor: default;
+  }
+}
+
+tbody {
+  cursor: default;
+  user-select: none;
+
+  .fa-trash-alt,
+  .fa-pencil-alt {
+    cursor: pointer;
+  }
+}
