@@ -73,9 +73,9 @@ app.post('/logout', authHandler.logout);
 // Példa route-ok
 // Beékelhetünk több middleware-t, előbb az authenticatejwt, ami az authenticate.js-ben szereplően vizsgálaja az authorizációt és a usert elhelyezi a kérésben.
 // A /person url-t az érheti el, aki be van jelentkezve
-app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
+// app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
 // A /post url-t az érheti el, aki be van jelentkezve és admin
-app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
+// app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
 
 // Swagger route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
