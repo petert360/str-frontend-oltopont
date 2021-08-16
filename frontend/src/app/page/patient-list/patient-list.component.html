@@ -3,7 +3,8 @@
         <h1 class="mx-auto">Páciensek</h1>
 
         <div class="col-6">
-            <input (keyup)="onChangePhrase($event)" class="form-control" type="text" placeholder="Keresés a páciensek neve alapján...">
+            <input (keyup)="onChangePhrase($event)" class="form-control" type="text"
+                placeholder="Keresés a páciensek neve alapján...">
         </div>
     </div>
     <div class="row">
@@ -35,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let patient of list$ | async | sorter:columnKey:sortDir | filter:phrase:'name'">
+                <tr *ngFor="let patient of list$ | async | sorter:columnKey:sortDir | filter:phrase:'name' | slice:pageSliceStart:pageSliceEnd">
                     <td class="text-center align-middle">{{ patient.appointment }}</td>
                     <td class="text-center align-middle">{{ patient.name }}</td>
                     <td class="text-center align-middle">{{ patient.personalId }}</td>
@@ -53,5 +54,26 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+
+<!-- PAGINATOR -->
+<div class="row mt-1">
+    <div class="col-12">
+        <nav class="d-flex justify-content-center">
+            <ul class="pagination text-center">
+                <li class="page-item">
+                    <a (click)="onStepPage($event, -1)" class="page-link" href="#">&laquo;</a>
+                </li>
+                <li *ngFor="let btn of paginator" class="page-item" [class.active]="btn.page === currentPage">
+                    <a (click)="onPaginate($event, btn)" class="page-link" href="#">
+                        {{ btn.page }}
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a (click)="onStepPage($event, +1)" class="page-link" href="#">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
