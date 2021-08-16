@@ -1,5 +1,16 @@
 <app-navbar></app-navbar>
 
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="user" class="col-md-3 col-lg-2">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-12 col-sm-12 col-md-9 col-lg-10 mx-auto">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
 <!-- 
     <div class="container">
         <div class="row">
@@ -14,19 +25,7 @@
  -->
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3 col-lg-2">
-            <app-sidebar></app-sidebar>
-        </div>
-        <div class="col-12 col-sm-12 col-md-9 col-lg-10">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
-
 <!-- <app-navbar></app-navbar>
-
 <div class="container-fluid">
     <div class="row">
         <app-sidebar></app-sidebar>

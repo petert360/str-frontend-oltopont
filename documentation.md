@@ -44,9 +44,29 @@ A frontend oldal és függőségeinek telepítése:
 
  - A `/frontend/dist/frontend` mappa tartalmát át kell másolni a `/backend/public` mappába.
 
- - Docker konténer felépítése és futtatása: `docker-compose up`
+## Az alkalmazás telepítése Docker konténer használatával
+
+  Amennyiben a backend konténerhez csatolt lokális MongoDB adatbázis szeretnénk használni.
+
+ 1. Docker konténer felépítése (a `/backend` mappából indítva):  
+  `docker build -t vizsgaremek-oltopont:latest .`  
+  (npm script: `npm docker-build`)
+
+ 2. Docker konténer futtatása (a `/backend` mappából indítva):  
+  `docker run -p 3000:3000 vizsgaremek-oltopont`  
+  (npm script:  `docker-run`)
+  
+## Az alkalmazás telepítése Docker Compose segítségével
+
+ - Docker konténer felépítése és futtatása: a `/backend` mappából:  
+ `docker-compose up`
 
 ## Belépés az alkalmazásba
+
+Az alkalmazás böngészőből, a telepített számítógép 3000-es portján érhető el.
+
+Például: http://localhost:3000/
+
 Az alkalmazásba történő belépéséhez használható e-mail cím és jelszó párosok:
 
 | E-mail          | Jelszó |
@@ -54,8 +74,6 @@ Az alkalmazásba történő belépéséhez használható e-mail cím és jelszó
 | admin@gmail.com | admin  |
 | orvos@gmail.com | orvos  |
 | nover@gmail.com | nover  |
-
-
 
 ## Az alkalmazás konfigurálása
 

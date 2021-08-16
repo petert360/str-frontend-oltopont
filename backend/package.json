@@ -8,7 +8,8 @@
     "start": "node src/index.js",
     "test": "jest",
     "docker-build": "docker build -t vizsgaremek-oltopont:latest .",
-    "docker-run": "docker run -p 3000:3000 vizsgaremek-oltopont"
+    "docker-run": "docker run -p 3000:3000 vizsgaremek-oltopont",
+    "docker-compose-up": "docker-compose up"
   },
   "keywords": [],
   "author": "",
